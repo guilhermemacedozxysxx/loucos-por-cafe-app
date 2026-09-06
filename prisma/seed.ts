@@ -192,6 +192,13 @@ const main = async () => {
         },
       ],
     });
+
+    const snacksCategory = await tx.menuCategory.create({
+      data: {
+        name: "Lanches",
+        coffeeShopId: coffeeShop.id,
+      },
+    });
   });
 };
 
