@@ -322,6 +322,33 @@ const main = async () => {
         },
       ],
     });
+
+    await tx.product.createMany({
+      data: [
+        {
+          name: "Coca-cola",
+          description:
+            "Refrescante e icônica, servida bem gelada para proporcionar uma experiência única a cada gole. Seu sabor inconfundível e equilibrado combina perfeitamente com nossos lanches e cookies, trazendo aquele toque de nostalgia com qualidade.",
+          ingredients: [],
+          price: 7.9,
+          imageUrl:
+            "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQJS1b33q29eEsh0CVmOywrqx1UPnJpRGcHN5v",
+          menuCategoryId: drinksCategory.id,
+          coffeeShopId: coffeeShop.id,
+        },
+        {
+          name: "Fanta Laranja",
+          description:
+            "Leve, vibrante e cheia de sabor, essa bebida traz o clássico gosto cítrico da laranja com um toque doce e refrescante. Servida bem gelada, é perfeita para acompanhar nossos lanches e proporcionar uma experiência descontraída e saborosa.",
+          ingredients: [],
+          price: 7.9,
+          imageUrl:
+            "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQW7Kxm9gniS9XCLQu7Nb4jvBYZze16goaOqsK",
+          menuCategoryId: drinksCategory.id,
+          coffeeShopId: coffeeShop.id,
+        },
+      ],
+    });
   });
 };
 
