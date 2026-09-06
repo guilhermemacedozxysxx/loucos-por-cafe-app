@@ -28,7 +28,7 @@ const main = async () => {
       },
     });
 
-        await tx.product.createMany({
+    await tx.product.createMany({
       data: [
         {
           name: "Montanha de Cookies Tradicionais®",
@@ -105,7 +105,12 @@ const main = async () => {
       ],
     });
 
-    
+    const cookiesCategory = await tx.menuCategory.create({
+      data: {
+        name: "Cookies",
+        coffeeShopId: coffeeShop.id,
+      },
+    });
   });
 };
 
