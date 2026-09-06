@@ -259,6 +259,13 @@ const main = async () => {
         },
       ],
     });
+
+    const drinksCategory = await tx.menuCategory.create({
+      data: {
+        name: "Bebidas",
+        coffeeShopId: coffeeShop.id,
+      },
+    });
   });
 };
 
