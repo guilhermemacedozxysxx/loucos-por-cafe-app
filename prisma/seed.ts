@@ -363,6 +363,13 @@ const main = async () => {
         coffeeShopId: coffeeShop.id,
       },
     });
+
+    const desertsCategory = await tx.menuCategory.create({
+      data: {
+        name: "Sobremesas",
+        coffeeShopId: coffeeShop.id,
+      },
+    });
   });
 };
 
