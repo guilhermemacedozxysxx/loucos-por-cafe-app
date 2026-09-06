@@ -370,6 +370,44 @@ const main = async () => {
         coffeeShopId: coffeeShop.id,
       },
     });
+
+    await tx.product.createMany({
+      data: [
+        {
+          name: "Sorvete com Cookie Supreme®",
+          description:
+            "Uma combinação irresistível que une o melhor dos dois mundos. Nosso sorvete artesanal cremoso é servido com um cookie gourmet levemente aquecido, criando um contraste perfeito entre quente e frio. A cada colherada, a textura macia do sorvete se mistura com a crocância do cookie e o chocolate derretido, proporcionando uma experiência indulgente e marcante.",
+          ingredients: [],
+          price: 19.9,
+          imageUrl:
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSXn3yMFF7KCT6rObB5qvh3As1MSwQ28toxupl",
+          menuCategoryId: desertsCategory.id,
+          coffeeShopId: coffeeShop.id,
+        },
+        {
+          name: "Fatia Bolo de Chocolate Premium®",
+          description:
+            "Uma sobremesa rica e indulgente, com recheio cremoso de chocolate e textura aveludada. Ideal para quem busca uma experiência intensa e sofisticada em cada pedaço.",
+          ingredients: [],
+          price: 15.9,
+          imageUrl:
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSvRjNW8p7zYvGMSwiKfTNZOokREgqhbs6dCBL",
+          menuCategoryId: desertsCategory.id,
+          coffeeShopId: coffeeShop.id,
+        },
+        {
+          name: "Taça De Morango Delight®",
+          description:
+            "Uma sobremesa elegante e irresistível, que combina camadas de sorvete macio com morangos frescos e um creme leve e aveludado. Finalizada com calda de morango, é uma opção equilibrada entre intensidade e frescor, perfeita para quem busca uma experiência completa em cada colherada.",
+          ingredients: [],
+          price: 18.9,
+          imageUrl:
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSEl7IHGuqrSmTu4UIvDGd7sFJ2A8Bpw5bczRH",
+          menuCategoryId: desertsCategory.id,
+          coffeeShopId: coffeeShop.id,
+        },
+      ],
+    });
   });
 };
 
