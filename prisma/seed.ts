@@ -111,6 +111,87 @@ const main = async () => {
         coffeeShopId: coffeeShop.id,
       },
     });
+
+    await tx.product.createMany({
+      data: [
+        {
+          name: "Cookie Duplo Chocolate Supremo®",
+          description:
+            "Uma experiência intensa e envolvente para os verdadeiros apaixonados por chocolate. Este cookie apresenta uma massa rica de cacau premium, cuidadosamente preparada para atingir uma textura macia e levemente úmida. Repleto de pedaços generosos de chocolate meio amargo e gotas de chocolate intenso, cada mordida entrega camadas profundas de sabor.",
+          ingredients: [
+            "Farinha de trigo selecionada",
+            "Massa amanteigada com cacau premium",
+            "Chocolate meio amargo em pedaços generosos",
+            "Gotas de chocolate intenso",
+            "Açúcar mascavo caramelizado",
+            "Manteiga pura de alta qualidade",
+          ],
+          price: 22.9,
+          imageUrl:
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSXZ1JCt7KCT6rObB5qvh3As1MSwQ28toxupl0",
+          menuCategoryId: cookiesCategory.id,
+          coffeeShopId: coffeeShop.id,
+        },
+        {
+          name: "Cookie Caramelo Salgado Premium®",
+          description:
+            "Uma combinação sofisticada e surpreendente que une o melhor do doce e do salgado em perfeita harmonia. A massa amanteigada envolve um recheio cremoso de caramelo que se revela a cada mordida, trazendo uma textura envolvente e irresistível.",
+          ingredients: [
+            "Farinha de trigo selecionada",
+            "Massa amanteigada artesanal",
+            "Recheio de caramelo cremoso",
+            "Gotas de chocolate ao leite nobre",
+            "Açúcar mascavo caramelizado",
+            "Essência de baunilha natural",
+            "Flor de sal delicada",
+            "Manteiga pura de alta qualidade",
+          ],
+          price: 22.9,
+          imageUrl:
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSVsWArmgT4OrLRDaJHbw3G95Uxqugk7F8CYel",
+          menuCategoryId: cookiesCategory.id,
+          coffeeShopId: coffeeShop.id,
+        },
+        {
+          name: "Cookie Nozes Crocantes®",
+          description:
+            "Elegante e cheio de personalidade, este cookie combina a suavidade de uma massa amanteigada com a crocância marcante de nozes cuidadosamente selecionadas. O sabor levemente tostado das nozes se mistura perfeitamente com o chocolate meio amargo, criando uma experiência rica e equilibrada.",
+          ingredients: [
+            "Farinha de trigo selecionada",
+            "Massa amanteigada premium",
+            "Nozes selecionadas crocantes",
+            "Gotas de chocolate meio amargo",
+            "Açúcar mascavo caramelizado",
+            "Essência de baunilha natural",
+            "Toque de sal refinado",
+            "Manteiga pura de alta qualidade",
+          ],
+          price: 22.9,
+          imageUrl:
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSL6wFtVZvB2XbwtsQPGlRmxzgk7AyN9ZYWeqp",
+          menuCategoryId: cookiesCategory.id,
+          coffeeShopId: coffeeShop.id,
+        },
+        {
+          name: "Cookie ChocoWhite Elegance®",
+          description:
+            "Delicado e sofisticado, este cookie oferece uma experiência mais suave e cremosa, perfeita para quem aprecia sabores equilibrados. Sua massa amanteigada, levemente dourada, envolve pedaços generosos de chocolate branco que se tornam incrivelmente cremosos durante o preparo.",
+          ingredients: [
+            "Farinha de trigo selecionada",
+            "Massa amanteigada premium",
+            "Chocolate branco nobre em pedaços",
+            "Açúcar mascavo caramelizado",
+            "Essência de baunilha natural",
+            "Manteiga pura de alta qualidade",
+          ],
+          price: 26.9,
+          imageUrl:
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSX1yfW87KCT6rObB5qvh3As1MSwQ28toxupl0",
+          menuCategoryId: cookiesCategory.id,
+          coffeeShopId: coffeeShop.id,
+        },
+      ],
+    });
   });
 };
 
