@@ -349,6 +349,20 @@ const main = async () => {
         },
       ],
     });
+
+    await tx.product.create({
+      data: {
+        name: "Água Mineral",
+        description:
+          "Essencial e pura, perfeita para acompanhar qualquer momento com leveza e equilíbrio.",
+        ingredients: [],
+        price: 3.9,
+        imageUrl:
+          "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQ7i05S5tkc0L9oMIXZsFJtwnBh2KCz3y6uSW1",
+        menuCategoryId: drinksCategory.id,
+        coffeeShopId: coffeeShop.id,
+      },
+    });
   });
 };
 
