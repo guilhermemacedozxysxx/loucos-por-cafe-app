@@ -266,6 +266,62 @@ const main = async () => {
         coffeeShopId: coffeeShop.id,
       },
     });
+
+    await tx.product.createMany({
+      data: [
+        {
+          name: "Café Coado Especial®",
+          description:
+            "Suave e aromático, preparado lentamente para preservar todas as notas naturais do café. Uma opção equilibrada e perfeita para qualquer momento do dia.",
+          ingredients: [
+            "Café moído na hora (grãos selecionados)",
+            "Água filtrada aquecida",
+            "Método de preparo artesanal",
+            "Extração lenta controlada",
+          ],
+          price: 7.9,
+          imageUrl:
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSRfpevb80zG7c8kFE19qou5sK3hSxtlHAf4Vm",
+          menuCategoryId: drinksCategory.id,
+          coffeeShopId: coffeeShop.id,
+        },
+        {
+          name: "Cappuccino Cremoso Premium®",
+          description:
+            "Uma combinação perfeita entre café, leite vaporizado e uma espuma cremosa e aveludada. Finalizado com um leve toque de chocolate, é uma bebida equilibrada e extremamente aconchegante.",
+          ingredients: [
+            "Café espresso selecionado",
+            "Leite vaporizado cremoso",
+            "Espuma de leite aveludada",
+            "Chocolate em pó premium",
+            "Toque de canela aromática",
+            "Açúcar refinado especial (opcional)",
+          ],
+          price: 12.9,
+          imageUrl:
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSGnlU7feTMiF0Uv72WBaGu1odwsJfQ6pqNYL5",
+          menuCategoryId: drinksCategory.id,
+          coffeeShopId: coffeeShop.id,
+        },
+        {
+          name: "Mocha Chocolate Supremo®",
+          description:
+            "Uma bebida intensa e indulgente que combina café e chocolate de forma equilibrada. Cremosa e envolvente, é perfeita para quem quer algo mais doce e marcante.",
+          ingredients: [
+            "Café espresso selecionado",
+            "Leite vaporizado cremoso",
+            "Chocolate meio amargo derretido",
+            "Espuma de leite aveludada",
+            "Finalização com cacau polvilhado",
+          ],
+          price: 14.9,
+          imageUrl:
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSYSXxyWk7gicFK3GRvaO4uSwnLW8xIQPsN2jY",
+          menuCategoryId: drinksCategory.id,
+          coffeeShopId: coffeeShop.id,
+        },
+      ],
+    });
   });
 };
 
