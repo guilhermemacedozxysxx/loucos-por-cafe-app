@@ -199,6 +199,66 @@ const main = async () => {
         coffeeShopId: coffeeShop.id,
       },
     });
+
+    await tx.product.createMany({
+      data: [
+        {
+          name: "Croissant Presunto & Queijo Premium",
+          description:
+            "Uma versão recheada que combina a leveza do croissant com um recheio cremoso e saboroso. O presunto selecionado e o queijo derretido criam uma combinação clássica, perfeita para qualquer momento do dia.",
+          ingredients: [
+            "Massa folhada amanteigada",
+            "Presunto selecionado",
+            "Queijo muçarela premium",
+            "Manteiga pura de alta qualidade",
+            "Farinha de trigo selecionada",
+            "Toque de sal refinado",
+          ],
+          price: 14.9,
+          imageUrl:
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSQpBtdUjkrbvz7nKSPhW9aduEYOXGMfTyUi6Z",
+          menuCategoryId: snacksCategory.id,
+          coffeeShopId: coffeeShop.id,
+        },
+        {
+          name: "Sanduíche Natural Fresh",
+          description:
+            "Leve, equilibrado e refrescante, ideal para quem busca uma opção mais saudável sem abrir mão do sabor. Preparado com ingredientes frescos e selecionados, traz uma combinação suave e deliciosa.",
+          ingredients: [
+            "Pão integral artesanal",
+            "Peito de frango desfiado temperado",
+            "Maionese leve especial",
+            "Alface fresca crocante",
+            "Tomate selecionado",
+            "Cenoura ralada fresca",
+            "Toque de sal e ervas finas",
+          ],
+          price: 16.9,
+          imageUrl:
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSVe5VaaGgT4OrLRDaJHbw3G95Uxqugk7F8CYe",
+          menuCategoryId: snacksCategory.id,
+          coffeeShopId: coffeeShop.id,
+        },
+        {
+          name: "Toast Caprese Gourmet",
+          description:
+            "Inspirado na clássica combinação italiana, este toast une leveza e sofisticação. O pão levemente tostado contrasta com a cremosidade do queijo e o frescor dos ingredientes.",
+          ingredients: [
+            "Pão artesanal tostado",
+            "Queijo muçarela de búfala",
+            "Tomate fresco selecionado",
+            "Folhas de manjericão",
+            "Azeite de oliva extra virgem",
+            "Toque de sal refinado",
+          ],
+          price: 18.9,
+          imageUrl:
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSS7cRoKP4TPGio1hIQx7XAuHLq98jWJ6ODNla",
+          menuCategoryId: snacksCategory.id,
+          coffeeShopId: coffeeShop.id,
+        },
+      ],
+    });
   });
 };
 
