@@ -1,4 +1,21 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
+
+const lufga = localFont({
+  src: [
+    { path: "../fonts/lufga/Lufga-Thin.ttf", weight: "100", style: "normal" },
+    { path: "../fonts/lufga/Lufga-Extra-Light.ttf", weight: "200", style: "normal" },
+    { path: "../fonts/lufga/Lufga-Light.ttf", weight: "300", style: "normal" },
+    { path: "../fonts/lufga/Lufga-Regular.ttf", weight: "400", style: "normal" },
+    { path: "../fonts/lufga/Lufga-Medium.ttf", weight: "500", style: "normal" },
+    { path: "../fonts/lufga/Lufga-Semi-Bold.ttf", weight: "600", style: "normal" },
+    { path: "../fonts/lufga/Lufga-Bold.ttf", weight: "700", style: "normal" },
+    { path: "../fonts/lufga/Lufga-Extra-Bold.ttf", weight: "800", style: "normal" },
+    { path: "../fonts/lufga/Lufga-Black.ttf", weight: "900", style: "normal" },
+  ],
+  variable: "--font-lufga",
+});
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
