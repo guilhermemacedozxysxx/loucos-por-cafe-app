@@ -1,5 +1,7 @@
+import SplashScreen from "@/components/ui/splash-screen";
+
 const HomePage = () => {
-  return <h1 className="font-lufga font-medium">guilherme aprigio macedo</h1>;
+  return <SplashScreen />;
 };
 
 export default HomePage;

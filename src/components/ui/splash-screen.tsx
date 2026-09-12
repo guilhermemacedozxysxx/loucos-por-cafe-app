@@ -1,6 +1,6 @@
 const SplashScreen = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center">
+    <div className="flex min-h-screen items-center justify-center bg-[--background]">
       <h1>Loucos por Café</h1>
     </div>
   );
