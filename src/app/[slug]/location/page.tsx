@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 const LocationPage = () => {
@@ -39,6 +40,7 @@ const LocationPage = () => {
           <h1 className="font-lufga font-semibold text-2xl text-center">
             Permitir localização
           </h1>
+
           <p className="w-90 h-20 mt-1 font-lufga font-normal text-center text-[--muted-foreground] text-sm">
             Use sua localização para encontrarmos as <br />
             cafeterias mais próximas de você e oferecer uma <br />
@@ -46,6 +48,15 @@ const LocationPage = () => {
           </p>
         </div>
       </main>
+
+      <footer className="flex items-center justify-center">
+        <Button
+          variant={"outline"}
+          className="fixed right-5 bottom-6 left-5 rounded-full border-none bg-[--primary] p-6 font-lufga text-lg font-medium text-[--foreground]"
+        >
+          Permitir localização
+        </Button>
+      </footer>
     </>
   );
 };
