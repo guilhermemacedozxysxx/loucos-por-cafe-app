@@ -8,7 +8,7 @@ const LocationPage = () => {
       </header>
 
       <main>
-        <div className="flex gap-3 ml-14">
+        <div className="flex gap-3 ml-14 items-center">
           <div className="relative flex h-20 w-20 items-center justify-center rounded-2xl bg-[--primary]">
             <Image
               src="/images/LOGO.svg"
@@ -33,6 +33,17 @@ const LocationPage = () => {
               Entrega gratuita
             </span>
           </div>
+        </div>
+
+        <div className="mt-14">
+          <h1 className="font-lufga font-semibold text-2xl text-center">
+            Permitir localização
+          </h1>
+          <p className="w-90 h-20 mt-1 font-lufga font-normal text-center text-[--muted-foreground] text-sm">
+            Use sua localização para encontrarmos as <br />
+            cafeterias mais próximas de você e oferecer uma <br />
+            experiência mais personalizada.
+          </p>
         </div>
       </main>
     </>
