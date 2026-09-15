@@ -1,18 +1,7 @@
-interface CoffeeShopPageProps {
-  params: Promise<{
-    slug: string
-  }>
-}
+import SplashScreen from "@/components/ui/splash-screen";
 
-const CoffeeShopPage = async ({ params }: CoffeeShopPageProps) => {
-  const { slug } = await params
+const HomePage = () => {
+  return <SplashScreen />;
+};
 
-  return (
-    <main>
-      <h1>Loucos por Café</h1>
-      <p>Slug recebida: {slug}</p>
-    </main>
-  )
-}
-
-export default CoffeeShopPage;
+export default HomePage;

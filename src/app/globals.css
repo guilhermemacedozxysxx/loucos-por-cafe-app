@@ -74,6 +74,16 @@ body {
     --sidebar-ring: oklch(0.556 0 0);
   }
 }
+
+@keyframes loading {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
 @layer base {
   * {
     @apply border-border;
