@@ -1,60 +1,62 @@
 import { Button } from "@/components/ui/button";
+
 import Image from "next/image";
 
 const LocationPage = () => {
   return (
-    <>
-      <header className="h-6 w-full mt-16 mb-52 flex items-center text-center justify-center">
-        <p className="font-lufga font-semibold text-xl uppercase">Bem Vindo</p>
+    <div className="flex min-h-dvh flex-col">
+      <header className="flex w-full items-center justify-center pt-14 text-center">
+        <p className="font-lufga text-lg font-semibold uppercase">
+          Bem Vindo
+        </p>
       </header>
 
-      <main>
-        <div className="flex gap-3 ml-14 items-center">
-          <div className="relative flex h-20 w-20 items-center justify-center rounded-2xl bg-[--primary]">
+      <main className="flex flex-1 flex-col px-5 pt-20">
+        <div className="flex items-center gap-3 ml-9">
+          <div className="relative flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-[--primary]">
             <Image
               src="/images/LOGO.svg"
               alt="Loucos por Café"
               width={330}
               height={330}
               priority
-              className="mt-2 mr-2 h-28 w-28 max-w-none"
+              className="mr-2 mt-2 h-28 w-28 max-w-none"
             />
           </div>
 
           <div className="flex flex-col">
-            <h1 className="font-lufga font-semibold text-xl text-black">
+            <h1 className="font-lufga text-lg font-semibold text-black">
               Loucos por Café®
             </h1>
 
-            <p className="font-lufga font-medium text-md text-[--secondary] opacity-60">
+            <p className="font-lufga text-sm font-medium text-[--secondary] opacity-60">
               Cafeteria • 15 - 20 min
             </p>
 
-            <span className="font-lufga font-medium text-sm text-[--primary]">
+            <span className="font-lufga text-sm font-medium text-[--primary]">
               Entrega gratuita
             </span>
           </div>
         </div>
 
-        <div className="mt-14">
-          <h1 className="font-lufga font-semibold text-2xl text-center">
+        <div className="mt-12 text-center">
+          <h1 className="font-lufga text-xl font-semibold">
             Permitir localização
           </h1>
 
-          <p className="w-90 h-20 mt-1 font-lufga font-normal text-center text-[--muted-foreground] text-sm">
-            Use sua localização para encontrarmos as <br />
-            cafeterias mais próximas de você e oferecer uma <br />
-            experiência mais personalizada.
+          <p className="mx-auto mt-2 max-w-sm font-lufga text-sm font-normal leading-5 text-[--muted-foreground]">
+            Use sua localização para encontrarmos as cafeterias mais próximas de
+            você e oferecer uma experiência mais personalizada.
           </p>
         </div>
       </main>
 
-      <footer className="flex items-center justify-center">
-        <Button className="fixed right-5 bottom-6 left-5 rounded-full border-none bg-[--primary] p-6 font-lufga text-lg font-medium text-[--foreground] active:bg-[--primary] active:text-[--foreground] focus:bg-[--primary] focus:text-[--foreground]">
+      <footer className="px-5 pb-6">
+        <Button className="w-full rounded-full border-none bg-[--primary] p-6 font-lufga text-base font-medium text-[--foreground] active:bg-[--primary] active:text-[--foreground] focus:bg-[--primary] focus:text-[--foreground]">
           Permitir localização
         </Button>
       </footer>
-    </>
+    </div>
   );
 };
 
