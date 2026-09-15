@@ -4,7 +4,7 @@ import Image from "next/image";
 const LocationPage = () => {
   return (
     <>
-      <header className="h-6 w-full mt-16 mb-40 flex items-center text-center justify-center">
+      <header className="h-6 w-full mt-16 mb-52 flex items-center text-center justify-center">
         <p className="font-lufga font-semibold text-xl uppercase">Bem Vindo</p>
       </header>
 
@@ -50,10 +50,7 @@ const LocationPage = () => {
       </main>
 
       <footer className="flex items-center justify-center">
-        <Button
-          variant={"outline"}
-          className="fixed right-5 bottom-6 left-5 rounded-full border-none bg-[--primary] p-6 font-lufga text-lg font-medium text-[--foreground]"
-        >
+        <Button className="fixed right-5 bottom-6 left-5 rounded-full border-none bg-[--primary] p-6 font-lufga text-lg font-medium text-[--foreground] active:bg-[--primary] active:text-[--foreground] focus:bg-[--primary] focus:text-[--foreground]">
           Permitir localização
         </Button>
       </footer>
