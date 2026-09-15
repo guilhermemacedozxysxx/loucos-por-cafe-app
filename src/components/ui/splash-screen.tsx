@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { PulseLoader } from "react-spinners";
 
 export default function SplashScreen() {
   const router = useRouter();
@@ -27,8 +28,8 @@ export default function SplashScreen() {
         className="h-auto w-32"
       />
 
-      <div className="mt-6 h-1 w-32 overflow-hidden rounded-full bg-white/20">
-        <div className="h-full animate-[loading_1.5s_linear_forwards] bg-white" />
+      <div className="mt-6">
+        <PulseLoader color="#ffffff" size={8} speedMultiplier={0.7} />
       </div>
     </div>
   );
