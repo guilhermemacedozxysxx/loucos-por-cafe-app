@@ -4,6 +4,21 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 const LocationPage = () => {
+  const handleLocationPermission = () => {
+  if (!navigator.geolocation) {
+    console.log("Geolocalização não suportada pelo navegador.");
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(
+    () => {
+      console.log("Localização permitida.");
+    },
+    () => {
+      console.log("Não foi possível acessar a localização.");
+    },
+  );
+};
   return (
     <div className="flex min-h-dvh flex-col">
       <header className="flex w-full items-center justify-center pt-14 text-center">
