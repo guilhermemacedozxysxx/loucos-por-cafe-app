@@ -11,8 +11,11 @@ const LocationPage = () => {
   }
 
   navigator.geolocation.getCurrentPosition(
-    () => {
-      console.log("Localização permitida.");
+    (position) => {
+      const { latitude, longitude} = position.coords;
+
+      console.log("Latitude", latitude);
+      console.log("Longitude", longitude);
     },
     () => {
       console.log("Não foi possível acessar a localização.");
