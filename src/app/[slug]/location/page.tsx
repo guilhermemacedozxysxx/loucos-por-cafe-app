@@ -68,7 +68,17 @@ const LocationPage = () => {
       </main>
 
       <footer className="px-5 pb-6">
-        <Button onClick={handleLocationPermission} className="w-full rounded-full border-none bg-[--primary] p-6 font-lufga text-base font-medium text-[--foreground] active:bg-[--primary] active:text-[--foreground] focus:bg-[--primary] focus:text-[--foreground]">
+        <Button
+          onClick={handleLocationPermission}
+          className="
+            w-full rounded-full border-none
+            bg-[--primary] p-6
+            font-lufga text-base font-medium text-[--foreground]
+            hover:bg-[--primary] hover:text-[--foreground]
+            focus:bg-[--primary] focus:text-[--foreground]
+            active:bg-[--primary] active:text-[--foreground]
+          "
+        >
           Permitir localização
         </Button>
       </footer>
