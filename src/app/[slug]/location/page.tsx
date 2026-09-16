@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button";
+"use client";
 
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 const LocationPage = () => {
