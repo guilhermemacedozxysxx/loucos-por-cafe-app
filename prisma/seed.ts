@@ -7,6 +7,20 @@ const prismaClient = new PrismaClient();
 
 const main = async () => {
   await prismaClient.$transaction(async (tx: any) => {
+
+    const addressTypes = ["Casa", "Trabalho", "Outro"];
+
+    for (const name of addressTypes) {
+      await tx.addressType.upsert({
+        where: {
+          name,
+        },
+        update: {},
+        create: {
+          name,
+        },
+      });
+    }
     await tx.coffeeShop.deleteMany();
 
     const coffeeShop = await tx.coffeeShop.create({
