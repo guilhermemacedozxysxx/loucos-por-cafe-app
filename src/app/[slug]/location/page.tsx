@@ -1,8 +1,44 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 
 import Image from "next/image";
 
 const LocationPage = () => {
+  const handleLocationPermission = () => {
+    if (!navigator.geolocation) {
+      console.log("Geolocalização não suportada pelo navegador.");
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+
+        console.log("Latitude:", latitude);
+        console.log("Longitude:", longitude);
+      },
+      (error) => {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            console.log("Permissão de localização negada.");
+            break;
+
+          case error.POSITION_UNAVAILABLE:
+            console.log("Localização indisponível.");
+            break;
+
+          case error.TIMEOUT:
+            console.log("Tempo limite para obter a localização.");
+            break;
+
+          default:
+            console.log("Erro desconhecido ao obter a localização.");
+        }
+      },
+    );
+  };
+
   return (
     <div className="flex min-h-dvh flex-col">
       <header className="flex w-full items-center justify-center pt-14 text-center">
@@ -12,7 +48,7 @@ const LocationPage = () => {
       </header>
 
       <main className="flex flex-1 flex-col px-5 pt-20">
-        <div className="flex items-center gap-3 ml-9">
+        <div className="ml-9 flex items-center gap-3">
           <div className="relative flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-[--primary]">
             <Image
               src="/images/LOGO.svg"
@@ -52,7 +88,17 @@ const LocationPage = () => {
       </main>
 
       <footer className="px-5 pb-6">
-        <Button className="w-full rounded-full border-none bg-[--primary] p-6 font-lufga text-base font-medium text-[--foreground] active:bg-[--primary] active:text-[--foreground] focus:bg-[--primary] focus:text-[--foreground]">
+        <Button
+          onClick={handleLocationPermission}
+          className="
+            w-full rounded-full border-none
+            bg-[--primary] p-6
+            font-lufga text-base font-medium text-[--foreground]
+            hover:bg-[--primary] hover:text-[--foreground]
+            focus:bg-[--primary] focus:text-[--foreground]
+            active:bg-[--primary] active:text-[--foreground]
+          "
+        >
           Permitir localização
         </Button>
       </footer>
