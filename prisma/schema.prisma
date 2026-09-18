@@ -23,6 +23,7 @@ model User {
   email             String    @unique
   phone             String
   secondaryPhone    String?
+  addresses         Address[]
   password          String
   isActive          Boolean   @default(true)
   emailVerified     Boolean   @default(false)
@@ -35,11 +36,40 @@ model User {
   updatedAt         DateTime  @updatedAt
 }
 
-model AddressType {
-  id        Int      @id @default(autoincrement())
-  name      String   @unique
+model Address {
+  id            String   @id @default(uuid())
+  recipientName String?
+  zipCode       String
+  street        String
+  number        String
+  complement    String?
+  neighborhood  String
+  city          String
+  state         String
+  reference     String?
+  latitude      Decimal? @db.Decimal(10, 7)
+  longitude     Decimal? @db.Decimal(10, 7)
+  isDefault     Boolean  @default(false)
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  addressTypeId Int
+  addressType   AddressType @relation(fields: [addressTypeId], references: [id])
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([addressTypeId])
+}
+
+model AddressType {
+  id        Int       @id @default(autoincrement())
+  name      String    @unique
+  addresses Address[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
 }
 
 model CoffeeShop {
