@@ -14,25 +14,25 @@ datasource db {
 }
 
 model User {
-  id                String   @id @default(uuid())
+  id                String    @id @default(uuid())
   name              String
   socialName        String?
-  cpf               String   @unique
+  cpf               String    @unique
   birthDate         DateTime?
   gender            String?
-  email             String   @unique
+  email             String    @unique
   phone             String
   secondaryPhone    String?
   password          String
-  isActive          Boolean  @default(true)
-  emailVerified     Boolean  @default(false)
-  phoneVerified     Boolean  @default(false)
+  isActive          Boolean   @default(true)
+  emailVerified     Boolean   @default(false)
+  phoneVerified     Boolean   @default(false)
   termsAcceptedAt   DateTime?
   privacyAcceptedAt DateTime?
-  marketingAccepted Boolean  @default(false)
+  marketingAccepted Boolean   @default(false)
   lastLoginAt       DateTime?
-  createdAt         DateTime @default(now())
-  updatedAt         DateTime @updatedAt
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
 }
 
 model CoffeeShop {
