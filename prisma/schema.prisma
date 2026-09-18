@@ -13,6 +13,28 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id                String   @id @default(uuid())
+  name              String
+  socialName        String?
+  cpf               String   @unique
+  birthDate         DateTime?
+  gender            String?
+  email             String   @unique
+  phone             String
+  secondaryPhone    String?
+  password          String
+  isActive          Boolean  @default(true)
+  emailVerified     Boolean  @default(false)
+  phoneVerified     Boolean  @default(false)
+  termsAcceptedAt   DateTime?
+  privacyAcceptedAt DateTime?
+  marketingAccepted Boolean  @default(false)
+  lastLoginAt       DateTime?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
 model CoffeeShop {
   id             String         @id @default(uuid())
   name           String
