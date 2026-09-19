@@ -1,9 +1,9 @@
-import RestaurantHeader from "./components/header";
+import CoffeeShopHeader from "./components/header";
 
 const MenuCategory = () => {
   return (
     <div>
-      <RestaurantHeader />
+      <CoffeeShopHeader />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const RestaurantHeader = () => {
+const CoffeeShopHeader = () => {
   return ( 
       <div className="relative h-[220px] w-full">
         <Image
@@ -13,4 +13,4 @@ const RestaurantHeader = () => {
    );
 }
  
-export default RestaurantHeader;
+export default CoffeeShopHeader;
