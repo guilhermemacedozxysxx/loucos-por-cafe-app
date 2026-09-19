@@ -1,6 +1,11 @@
+import { CoffeeShop } from "@prisma/client";
 import Image from "next/image";
 
-const CoffeeShopCategories = () => {
+interface CoffeeShopCategoriesProps {
+  coffeeshop: CoffeeShop;
+}
+
+const CoffeeShopCategories = ({coffeeshop}: CoffeeShopCategoriesProps) => {
   return ( 
     <div className="relative z-50 mt-[-1.5rem] rounded-t-3xl border bg-white">
       <div className="flex items-center gap-3">
@@ -11,7 +16,10 @@ const CoffeeShopCategories = () => {
           height={45}
           priority
         />
-        
+
+        <div>
+          <h2>{coffeeshop.name}</h2>
+        </div>
       </div>
     </div>
    );
