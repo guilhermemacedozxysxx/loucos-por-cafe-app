@@ -26,7 +26,7 @@ const CoffeeShopCategories = ({coffeeshop}: CoffeeShopCategoriesProps) => {
         </div>
 
         <div className="w-16 h-6 ml-14 mt-2 border border-neutral-200 bg-white rounded-full flex px-3 gap-1">
-          <div className="bg-[--primary]"><i className="fi fi-sr-star"></i></div>
+          <div className="mt-[2px]"><i className="fi fi-sr-star text-[--primary]"></i></div>
           <div className="font-lufga font-medium">5.0</div>
         </div>
       </div>
