@@ -1,13 +1,22 @@
-import { CoffeeShop } from "@prisma/client";
+import { Button } from "@/components/ui/button";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { Prisma } from "@prisma/client";
 import { ClockIcon } from "lucide-react";
 import Image from "next/image";
 
+type CoffeeShopCategories = Prisma.CoffeeShopGetPayload<{
+  include: {
+    menuCategories: true;
+  };
+}>;
+
 interface CoffeeShopCategoriesProps {
-  coffeeshop: CoffeeShop;
+  coffeeshop: CoffeeShopCategories;
 }
 
 const CoffeeShopCategories = ({coffeeshop}: CoffeeShopCategoriesProps) => {
   return ( 
+    
     <div className="relative z-50 mt-[-1.5rem] rounded-t-3xl pt-1 bg-white">
       <div className="flex items-center gap-3 m-5">
         <div className="flex justify-center w-14 h-14 bg-[--primary] rounded-xl">
@@ -35,6 +44,16 @@ const CoffeeShopCategories = ({coffeeshop}: CoffeeShopCategoriesProps) => {
           <ClockIcon size={16}/>
           <p>Aberto até as 23:00</p>
         </div>
+
+        <ScrollArea className="w-full ">
+          <div className="full w-max space-x-4 p-5">
+            {coffeeshop.menuCategories.map(category   => (
+              <Button key={category.id} variant="secondary" size="sm">
+                {category.name}
+              </Button>))}
+          </div>
+          <ScrollBar orientation="horizontal"/>
+        </ScrollArea>
     </div>
    );
 }
