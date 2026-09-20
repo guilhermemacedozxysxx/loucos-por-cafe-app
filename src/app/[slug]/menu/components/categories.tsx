@@ -18,12 +18,18 @@ interface CoffeeShopCategoriesProps {
 }
 
 const CoffeeShopCategories = ({ coffeeshop }: CoffeeShopCategoriesProps) => {
-  
-  const [selectedCategory, setSelectedCategory] = useState<MenuCategory>(coffeeshop.menuCategories[0]);
+  const [selectedCategory, setSelectedCategory] = useState<MenuCategory>(
+    coffeeshop.menuCategories[0],
+  );
+
   const handleCategoryClick = (category: MenuCategory) => {
-    setSelectedCategory(category)
-  }
-  
+    setSelectedCategory(category);
+  };
+
+  const getCategoryButtonVariant = (category: MenuCategory) => {
+    return selectedCategory.id == category.id ? "default" : "secondary";
+  };
+
   return (
     <div className="relative z-50 mt-[-1.5rem] rounded-t-3xl pt-1 bg-white">
       <div className="flex items-center gap-3 m-5">
@@ -65,7 +71,7 @@ const CoffeeShopCategories = ({ coffeeshop }: CoffeeShopCategoriesProps) => {
             <Button
               onClick={() => handleCategoryClick(category)}
               key={category.id}
-              variant={selectedCategory.id == category.id ? "default" : "secondary"}
+              variant={getCategoryButtonVariant(category)}
               size="sm"
               className="rounded-full"
             >
