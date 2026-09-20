@@ -4,14 +4,14 @@ import { Prisma } from "@prisma/client";
 import { ClockIcon } from "lucide-react";
 import Image from "next/image";
 
-type CoffeeShopCategories = Prisma.CoffeeShopGetPayload<{
+type CoffeeShopWithCategories = Prisma.CoffeeShopGetPayload<{
   include: {
     menuCategories: true;
   };
 }>;
 
 interface CoffeeShopCategoriesProps {
-  coffeeshop: CoffeeShopCategories;
+  coffeeshop: CoffeeShopWithCategories;
 }
 
 const CoffeeShopCategories = ({coffeeshop}: CoffeeShopCategoriesProps) => {
@@ -45,8 +45,8 @@ const CoffeeShopCategories = ({coffeeshop}: CoffeeShopCategoriesProps) => {
           <p>Aberto até as 23:00</p>
         </div>
 
-        <ScrollArea className="w-full ">
-          <div className="full w-max space-x-4 p-5">
+        <ScrollArea className="font-lufga font-semibold text-[--muted-foreground] w-full">
+          <div className="full w-max gap-4 p-5">
             {coffeeshop.menuCategories.map(category   => (
               <Button key={category.id} variant="secondary" size="sm">
                 {category.name}
