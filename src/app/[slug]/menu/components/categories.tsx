@@ -1,8 +1,11 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Prisma } from "@prisma/client";
+import { MenuCategory, Prisma } from "@prisma/client";
 import { ClockIcon } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 
 type CoffeeShopWithCategories = Prisma.CoffeeShopGetPayload<{
   include: {
@@ -15,6 +18,9 @@ interface CoffeeShopCategoriesProps {
 }
 
 const CoffeeShopCategories = ({ coffeeshop }: CoffeeShopCategoriesProps) => {
+  
+  const [selectedCategory, setSelectedCategory] = useState<MenuCategory>(coffeeshop.menuCategories[0])
+  
   return (
     <div className="relative z-50 mt-[-1.5rem] rounded-t-3xl pt-1 bg-white">
       <div className="flex items-center gap-3 m-5">
