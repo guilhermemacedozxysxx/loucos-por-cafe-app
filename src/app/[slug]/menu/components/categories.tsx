@@ -2,14 +2,16 @@
 
 import { Button } from "@/components/ui/button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { MenuCategory, Prisma } from "@prisma/client";
+import { Prisma } from "@prisma/client";
 import { ClockIcon } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
 type CoffeeShopWithCategories = Prisma.CoffeeShopGetPayload<{
   include: {
-    menuCategories: true;
+    menuCategories: {
+      include: {products: true};
+    }
   };
 }>;
 
@@ -17,16 +19,20 @@ interface CoffeeShopCategoriesProps {
   coffeeshop: CoffeeShopWithCategories;
 }
 
+type MenuCategoriesWithProducts = Prisma.MenuCategoryGetPayload<{
+  include: {products: true};
+}>;
+
 const CoffeeShopCategories = ({ coffeeshop }: CoffeeShopCategoriesProps) => {
-  const [selectedCategory, setSelectedCategory] = useState<MenuCategory>(
+  const [selectedCategory, setSelectedCategory] = useState<MenuCategoriesWithProducts>(
     coffeeshop.menuCategories[0],
   );
 
-  const handleCategoryClick = (category: MenuCategory) => {
+  const handleCategoryClick = (category: MenuCategoriesWithProducts) => {
     setSelectedCategory(category);
   };
 
-  const getCategoryButtonVariant = (category: MenuCategory) => {
+  const getCategoryButtonVariant = (category: MenuCategoriesWithProducts) => {
     return selectedCategory.id == category.id ? "default" : "secondary";
   };
 
