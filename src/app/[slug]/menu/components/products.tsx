@@ -12,6 +12,8 @@ const Products = ({ products }: ProductsProps) => {
           <h3 className="font-lufga text-sm">
             {product.name}
           </h3>
+
+          <p className="font-lufga text-sm text-[--muted-foreground] line-clamp-2">{product.description}</p>
         </div>
       ))}
     </div>
