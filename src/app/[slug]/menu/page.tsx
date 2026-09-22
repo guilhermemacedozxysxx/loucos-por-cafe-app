@@ -4,9 +4,13 @@ import CoffeeShopCategories from "./components/categories";
 import CoffeeShopHeader from "./components/header";
 
 const MenuCategory = async () => {
-    const coffeeShop = await prisma.coffeeShop.findFirst({
+  const coffeeShop = await prisma.coffeeShop.findFirst({
     include: {
-      menuCategories: true,
+      menuCategories: {
+        include: {
+          products: true,
+        },
+      },
     },
   });
 
@@ -17,7 +21,7 @@ const MenuCategory = async () => {
   return (
     <div>
       <CoffeeShopHeader />
-      <CoffeeShopCategories coffeeshop={coffeeShop}/>
+      <CoffeeShopCategories coffeeshop={coffeeShop} />
     </div>
   );
 };

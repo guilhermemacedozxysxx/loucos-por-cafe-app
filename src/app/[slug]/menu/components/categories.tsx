@@ -6,6 +6,7 @@ import { Prisma } from "@prisma/client";
 import { ClockIcon } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import Products from "./products";
 
 type CoffeeShopWithCategories = Prisma.CoffeeShopGetPayload<{
   include: {
@@ -87,6 +88,8 @@ const CoffeeShopCategories = ({ coffeeshop }: CoffeeShopCategoriesProps) => {
         </div>
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
+
+      <Products products={selectedCategory.products}/>
     </div>
   );
 };
