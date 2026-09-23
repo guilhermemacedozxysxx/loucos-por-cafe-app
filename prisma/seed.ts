@@ -7,7 +7,6 @@ const prismaClient = new PrismaClient();
 
 const main = async () => {
   await prismaClient.$transaction(async (tx: any) => {
-
     const addressTypes = ["Casa", "Trabalho", "Outro"];
 
     for (const name of addressTypes) {
@@ -50,7 +49,7 @@ const main = async () => {
             "Cookies artesanais empilhados, massa amanteigada, textura macia por dentro e crocante por fora, recheio generoso de chocolate.",
           price: 39.9,
           imageUrl:
-            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utStRJW9eC13ENFPmvHUc2VwjAabLuzfoeWhdYg",
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSRgKGNV80zG7c8kFE19qou5sK3hSxtlHAf4Vm",
           menuCategoryId: lancamentosCategory.id,
           coffeeShopId: coffeeShop.id,
           ingredients: [
@@ -69,7 +68,7 @@ const main = async () => {
             "Cookies artesanais empilhados, massa amanteigada, recheio cremoso de Nutella®, creme de avelã intenso e cobertura extra.",
           price: 49.9,
           imageUrl:
-            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utStRJW9eC13ENFPmvHUc2VwjAabLuzfoeWhdYg",
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSYOolUpk7gicFK3GRvaO4uSwnLW8xIQPsN2jY",
           menuCategoryId: lancamentosCategory.id,
           coffeeShopId: coffeeShop.id,
           ingredients: [
@@ -88,7 +87,7 @@ const main = async () => {
             "Cookie recém-assado, massa amanteigada, interior macio, gotas de chocolate derretidas e sabor marcante.",
           price: 9.9,
           imageUrl:
-            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSXZ1JCt7KCT6rObB5qvh3As1MSwQ28toxupl0",
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utS3hTEJgMDAetMvqdV7gh2mniQR9BcKYsP5fGF",
           menuCategoryId: lancamentosCategory.id,
           coffeeShopId: coffeeShop.id,
           ingredients: [
@@ -161,8 +160,7 @@ const main = async () => {
             "Manteiga pura de alta qualidade",
           ],
           price: 22.9,
-          imageUrl:
-            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSVsWArmgT4OrLRDaJHbw3G95Uxqugk7F8CYel",
+          imageUrl: "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSq0Sxo9TMhO8iF9vy2V137RZjI0dgrQWfspxl",
           menuCategoryId: cookiesCategory.id,
           coffeeShopId: coffeeShop.id,
         },
