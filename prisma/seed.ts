@@ -141,7 +141,7 @@ const main = async () => {
           ],
           price: 22.9,
           imageUrl:
-            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSXZ1JCt7KCT6rObB5qvh3As1MSwQ28toxupl0",
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSSvx77ULP4TPGio1hIQx7XAuHLq98jWJ6ODNl",
           menuCategoryId: cookiesCategory.id,
           coffeeShopId: coffeeShop.id,
         },
@@ -160,7 +160,8 @@ const main = async () => {
             "Manteiga pura de alta qualidade",
           ],
           price: 22.9,
-          imageUrl: "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSq0Sxo9TMhO8iF9vy2V137RZjI0dgrQWfspxl",
+          imageUrl:
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSq0Sxo9TMhO8iF9vy2V137RZjI0dgrQWfspxl",
           menuCategoryId: cookiesCategory.id,
           coffeeShopId: coffeeShop.id,
         },
@@ -180,7 +181,7 @@ const main = async () => {
           ],
           price: 22.9,
           imageUrl:
-            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSL6wFtVZvB2XbwtsQPGlRmxzgk7AyN9ZYWeqp",
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSG5pxC2beTMiF0Uv72WBaGu1odwsJfQ6pqNYL",
           menuCategoryId: cookiesCategory.id,
           coffeeShopId: coffeeShop.id,
         },
@@ -198,7 +199,7 @@ const main = async () => {
           ],
           price: 26.9,
           imageUrl:
-            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSX1yfW87KCT6rObB5qvh3As1MSwQ28toxupl0",
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSdzDascTXa4AhyxPSUg9mbkGIpuMznJ7v5cL2",
           menuCategoryId: cookiesCategory.id,
           coffeeShopId: coffeeShop.id,
         },
