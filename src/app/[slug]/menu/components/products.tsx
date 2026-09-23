@@ -23,7 +23,7 @@ const Products = ({ products }: ProductsProps) => {
               {product.description}
             </p>
 
-            <p className="mt-3 font-lufga text-lg font-semibold text-[--secondary]">
+            <p className="mt-3 font-lufga text-md font-semibold text-[--secondary] mb-3">
               {new Intl.NumberFormat("pt-BR", {
                 style: "currency",
                 currency: "BRL",
@@ -32,7 +32,7 @@ const Products = ({ products }: ProductsProps) => {
           </div>
 
           {/* IMAGEM */}
-          <div className="relative h-[82px] w-[82px] shrink-0">
+          <div className="relative h-[82px] w-[82px] shrink-0 mb-6">
             <Image
               src={product.imageUrl}
               alt={product.name}

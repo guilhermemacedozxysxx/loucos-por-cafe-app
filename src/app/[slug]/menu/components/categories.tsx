@@ -11,8 +11,8 @@ import Products from "./products";
 type CoffeeShopWithCategories = Prisma.CoffeeShopGetPayload<{
   include: {
     menuCategories: {
-      include: {products: true};
-    }
+      include: { products: true };
+    };
   };
 }>;
 
@@ -21,13 +21,12 @@ interface CoffeeShopCategoriesProps {
 }
 
 type MenuCategoriesWithProducts = Prisma.MenuCategoryGetPayload<{
-  include: {products: true};
+  include: { products: true };
 }>;
 
 const CoffeeShopCategories = ({ coffeeshop }: CoffeeShopCategoriesProps) => {
-  const [selectedCategory, setSelectedCategory] = useState<MenuCategoriesWithProducts>(
-    coffeeshop.menuCategories[0],
-  );
+  const [selectedCategory, setSelectedCategory] =
+    useState<MenuCategoriesWithProducts>(coffeeshop.menuCategories[0]);
 
   const handleCategoryClick = (category: MenuCategoriesWithProducts) => {
     setSelectedCategory(category);
@@ -89,7 +88,10 @@ const CoffeeShopCategories = ({ coffeeshop }: CoffeeShopCategoriesProps) => {
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
 
-      <Products products={selectedCategory.products}/>
+      <h3 className="font-lufga font-semibold text-lg px-6 mb-4">
+        {selectedCategory.name}
+      </h3>
+      <Products products={selectedCategory.products} />
     </div>
   );
 };
