@@ -296,7 +296,7 @@ const main = async () => {
             ],
             price: 7.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSRfpevb80zG7c8kFE19qou5sK3hSxtlHAf4Vm",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSPC9kATfqKOBQaIU26cbHnm0seXp39R5jL8ov",
             menuCategoryId: drinksCategory.id,
             coffeeShopId: coffeeShop.id,
           },
@@ -314,7 +314,7 @@ const main = async () => {
             ],
             price: 12.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSGnlU7feTMiF0Uv72WBaGu1odwsJfQ6pqNYL5",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utST6NZ9JSXEsNbBC206pFQPtVyjK91wDfR3Ax7",
             menuCategoryId: drinksCategory.id,
             coffeeShopId: coffeeShop.id,
           },
@@ -331,34 +331,7 @@ const main = async () => {
             ],
             price: 14.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSYSXxyWk7gicFK3GRvaO4uSwnLW8xIQPsN2jY",
-            menuCategoryId: drinksCategory.id,
-            coffeeShopId: coffeeShop.id,
-          },
-        ],
-      });
-
-      await tx.product.createMany({
-        data: [
-          {
-            name: "Coca-cola",
-            description:
-              "Refrescante e icônica, servida bem gelada para proporcionar uma experiência única a cada gole. Seu sabor inconfundível e equilibrado combina perfeitamente com nossos lanches e cookies, trazendo aquele toque de nostalgia com qualidade.",
-            ingredients: [],
-            price: 7.9,
-            imageUrl:
-              "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQJS1b33q29eEsh0CVmOywrqx1UPnJpRGcHN5v",
-            menuCategoryId: drinksCategory.id,
-            coffeeShopId: coffeeShop.id,
-          },
-          {
-            name: "Fanta Laranja",
-            description:
-              "Leve, vibrante e cheia de sabor, essa bebida traz o clássico gosto cítrico da laranja com um toque doce e refrescante. Servida bem gelada, é perfeita para acompanhar nossos lanches e proporcionar uma experiência descontraída e saborosa.",
-            ingredients: [],
-            price: 7.9,
-            imageUrl:
-              "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQW7Kxm9gniS9XCLQu7Nb4jvBYZze16goaOqsK",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utS9WEvA7hkBc0Ta4lIEn3vDHLjU1QKGrXWhOYy",
             menuCategoryId: drinksCategory.id,
             coffeeShopId: coffeeShop.id,
           },
@@ -373,7 +346,7 @@ const main = async () => {
           ingredients: [],
           price: 3.9,
           imageUrl:
-            "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQ7i05S5tkc0L9oMIXZsFJtwnBh2KCz3y6uSW1",
+            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSg7pj14GB9utSCYGQT0yN68EAzIZ7JgwL3oRc",
           menuCategoryId: drinksCategory.id,
           coffeeShopId: coffeeShop.id,
         },
@@ -395,7 +368,7 @@ const main = async () => {
             ingredients: [],
             price: 19.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSXn3yMFF7KCT6rObB5qvh3As1MSwQ28toxupl",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSQEP4dKjkrbvz7nKSPhW9aduEYOXGMfTyUi6Z",
             menuCategoryId: desertsCategory.id,
             coffeeShopId: coffeeShop.id,
           },
@@ -406,7 +379,7 @@ const main = async () => {
             ingredients: [],
             price: 15.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSvRjNW8p7zYvGMSwiKfTNZOokREgqhbs6dCBL",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSBsOo0dwjKYegl0kuQqJ39B7x8mtCnIPE2aoc",
             menuCategoryId: desertsCategory.id,
             coffeeShopId: coffeeShop.id,
           },
