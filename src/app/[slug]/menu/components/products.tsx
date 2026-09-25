@@ -1,16 +1,22 @@
+"use client";
+
 import { Product } from "@prisma/client";
 import Image from "next/image";
+import { useState } from "react";
 
 interface ProductsProps {
   products: Product[];
 }
 
 const Products = ({ products }: ProductsProps) => {
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  
   return (
     <div className="space-y-3 px-6">
       {products.map((product) => (
         <div
           key={product.id}
+          onClick={() => setSelectedProduct(product)}
           className="flex items-center justify-between gap-4"
         >
           {/* TEXTO */}
