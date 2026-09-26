@@ -3,27 +3,27 @@
 import { Product } from "@prisma/client";
 import Image from "next/image";
 import { useState } from "react";
+import ProductDrawer from "./product-drawer";
 
 interface ProductsProps {
   products: Product[];
 }
 
 const Products = ({ products }: ProductsProps) => {
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  
+  // const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
   return (
     <div className="space-y-3 px-6">
       {products.map((product) => (
         <div
           key={product.id}
-          onClick={() => setSelectedProduct(product)}
+          onClick={() => setDrawerOpen(true)}
           className="flex items-center justify-between gap-4"
         >
           {/* TEXTO */}
           <div className="flex-1">
-            <h3 className="font-lufga text-sm">
-              {product.name}
-            </h3>
+            <h3 className="font-lufga text-sm">{product.name}</h3>
 
             <p className="line-clamp-2 font-lufga text-sm text-[--muted-foreground]">
               {product.description}
@@ -48,6 +48,8 @@ const Products = ({ products }: ProductsProps) => {
           </div>
         </div>
       ))}
+
+      <ProductDrawer open={drawerOpen} onOpenChange={setDrawerOpen} />
     </div>
   );
 };
