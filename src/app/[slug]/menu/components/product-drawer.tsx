@@ -11,7 +11,7 @@ interface ProductDrawerProps {
 const ProductDrawer = ({ open, onOpenChange, product }: ProductDrawerProps) => {
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
-      <DrawerContent className="h-[85dvh] bg-white">
+      <DrawerContent className="h-[85dvh] bg-white rounded-t-[32px] overflow-hidden border-0">
         <DrawerTitle className="sr-only">Detalhes do produto</DrawerTitle>
 
         {product && (
