@@ -10,7 +10,7 @@ interface ProductsProps {
 }
 
 const Products = ({ products }: ProductsProps) => {
-  // const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
@@ -18,7 +18,10 @@ const Products = ({ products }: ProductsProps) => {
       {products.map((product) => (
         <div
           key={product.id}
-          onClick={() => setDrawerOpen(true)}
+          onClick={() => {
+            setDrawerOpen(true)
+            setSelectedProduct(product);
+          }}
           className="flex items-center justify-between gap-4"
         >
           {/* TEXTO */}
@@ -49,7 +52,10 @@ const Products = ({ products }: ProductsProps) => {
         </div>
       ))}
 
-      <ProductDrawer open={drawerOpen} onOpenChange={setDrawerOpen} />
+      <ProductDrawer 
+        product={selectedProduct}
+        open={drawerOpen} 
+        onOpenChange={setDrawerOpen} />
     </div>
   );
 };
