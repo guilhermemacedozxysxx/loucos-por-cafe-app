@@ -15,13 +15,13 @@ const ProductDrawer = ({
 }: ProductDrawerProps) => {
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
-      <DrawerContent className="h-[85dvh] overflow-hidden rounded-t-[32px] border-0 bg-white">
+      <DrawerContent className="h-[90dvh] overflow-hidden rounded-t-[32px] border-0 bg-white">
         <DrawerTitle className="sr-only">
           Detalhes do produto
         </DrawerTitle>
 
         {product && (
-          <div className="relative h-64 w-full">
+          <div className="relative h-80 w-full">
             <Image
               src={product.imageUrl}
               alt={product.name}
@@ -31,13 +31,22 @@ const ProductDrawer = ({
             />
 
             <div className="absolute bottom-5 left-6 z-10">
-              <div className="flex h-16 items-center rounded-full bg-white px-5 shadow-md">
+              <div className="flex h-12 w-72 items-center gap-3 rounded-full bg-white px-2">
+                <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full bg-[--primary]">
+                  <Image
+                    src="/images/LOGO.svg"
+                    alt="Logo Loucos por Café"
+                    fill
+                    className="object-cover mr-1"
+                  />
+                </div>
+
                 <div className="flex flex-col">
-                  <h3 className="font-lufga text-sm font-semibold text-black">
+                  <h3 className="font-lufga text-xs font-medium text-black">
                     Loucos por café ®
                   </h3>
 
-                  <p className="font-lufga text-xs text-gray-400">
+                  <p className="font-lufga text-[10px] text-gray-400">
                     Cafeteria · 15 - 20 min
                   </p>
                 </div>
