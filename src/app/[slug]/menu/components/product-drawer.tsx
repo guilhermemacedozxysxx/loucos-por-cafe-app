@@ -52,6 +52,9 @@ const ProductDrawer = ({
                 </div>
               </div>
             </div>
+            <div className="relative min-h-full z-10 mt-[310px] py-8 px-6 rounded-xl w-full bg-white">
+              Conteúdo aqui
+            </div>
           </div>
         )}
       </DrawerContent>
