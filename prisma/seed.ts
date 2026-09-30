@@ -48,10 +48,10 @@ const main = async () => {
           {
             name: "Montanha de Cookies Tradicionais®",
             description:
-              "Cookies artesanais empilhados, massa amanteigada, textura macia por dentro e crocante por fora, recheio generoso de chocolate.",
+              "Uma montanha irresistível de cookies artesanais preparados com massa amanteigada, textura crocante por fora e macia por dentro. Finalizada com gotas de chocolate e uma generosa camada de creme de avelã, perfeita para compartilhar ou aproveitar sem pressa.",
             price: 39.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSRgKGNV80zG7c8kFE19qou5sK3hSxtlHAf4Vm",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utStRJW9eC13ENFPmvHUc2VwjAabLuzfoeWhdYg",
             menuCategoryId: lancamentosCategory.id,
             coffeeShopId: coffeeShop.id,
             ingredients: [
@@ -67,10 +67,10 @@ const main = async () => {
           {
             name: "Montanha Suprema de Cookies®",
             description:
-              "Cookies artesanais empilhados, massa amanteigada, recheio cremoso de Nutella®, creme de avelã intenso e cobertura extra.",
+              "Uma experiência intensa para apaixonados por cookies: camadas de massa amanteigada, interior macio e gotas de chocolate em cada pedaço. O recheio generoso de Nutella® e a cobertura extra de creme de avelã deixam essa montanha ainda mais cremosa e marcante.",
             price: 49.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSYOolUpk7gicFK3GRvaO4uSwnLW8xIQPsN2jY",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utStRJW9eC13ENFPmvHUc2VwjAabLuzfoeWhdYg",
             menuCategoryId: lancamentosCategory.id,
             coffeeShopId: coffeeShop.id,
             ingredients: [
@@ -86,10 +86,10 @@ const main = async () => {
           {
             name: "Cookie Artesanal Individual®",
             description:
-              "Cookie recém-assado, massa amanteigada, interior macio, gotas de chocolate derretidas e sabor marcante.",
+              "Cookie artesanal recém-assado, preparado com massa amanteigada e gotas generosas de chocolate. Possui uma casquinha levemente crocante e interior macio, com aroma de baunilha e sabor equilibrado. Uma escolha perfeita para acompanhar seu café favorito.",
             price: 9.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utS3hTEJgMDAetMvqdV7gh2mniQR9BcKYsP5fGF",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSXZ1JCt7KCT6rObB5qvh3As1MSwQ28toxupl0",
             menuCategoryId: lancamentosCategory.id,
             coffeeShopId: coffeeShop.id,
             ingredients: [
@@ -104,7 +104,7 @@ const main = async () => {
           {
             name: "Cappuccino Cremoso Especial®",
             description:
-              "Café espresso encorpado, leite vaporizado, espuma cremosa e finalização suave de chocolate ou canela.",
+              "Cappuccino preparado com café espresso encorpado, leite cuidadosamente vaporizado e uma camada aveludada de espuma cremosa. Finalizado com chocolate em pó premium, entrega equilíbrio entre intensidade, cremosidade e aquele aroma irresistível de café.",
             price: 14.9,
             imageUrl:
               "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSxPwhVHBB5IkSCEM4u0Zd63X1JiN2RW8Qhpfc",
@@ -132,7 +132,7 @@ const main = async () => {
           {
             name: "Cookie Duplo Chocolate Supremo®",
             description:
-              "Uma experiência intensa e envolvente para os verdadeiros apaixonados por chocolate. Este cookie apresenta uma massa rica de cacau premium, cuidadosamente preparada para atingir uma textura macia e levemente úmida. Repleto de pedaços generosos de chocolate meio amargo e gotas de chocolate intenso, cada mordida entrega camadas profundas de sabor.",
+              "Cookie intenso preparado com massa amanteigada de cacau premium, interior macio e textura levemente úmida. Recheado com pedaços generosos de chocolate meio amargo e gotas de chocolate intenso, oferece uma experiência cremosa e marcante em cada mordida.",
             ingredients: [
               "Farinha de trigo selecionada",
               "Massa amanteigada com cacau premium",
@@ -143,14 +143,14 @@ const main = async () => {
             ],
             price: 22.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSSvx77ULP4TPGio1hIQx7XAuHLq98jWJ6ODNl",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSXZ1JCt7KCT6rObB5qvh3As1MSwQ28toxupl0",
             menuCategoryId: cookiesCategory.id,
             coffeeShopId: coffeeShop.id,
           },
           {
             name: "Cookie Caramelo Salgado Premium®",
             description:
-              "Uma combinação sofisticada e surpreendente que une o melhor do doce e do salgado em perfeita harmonia. A massa amanteigada envolve um recheio cremoso de caramelo que se revela a cada mordida, trazendo uma textura envolvente e irresistível.",
+              "Cookie artesanal de massa amanteigada com recheio cremoso de caramelo e gotas de chocolate ao leite. A finalização com flor de sal cria o equilíbrio perfeito entre doce e salgado, enquanto o interior macio contrasta com uma delicada camada crocante.",
             ingredients: [
               "Farinha de trigo selecionada",
               "Massa amanteigada artesanal",
@@ -163,14 +163,14 @@ const main = async () => {
             ],
             price: 22.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSq0Sxo9TMhO8iF9vy2V137RZjI0dgrQWfspxl",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSVsWArmgT4OrLRDaJHbw3G95Uxqugk7F8CYel",
             menuCategoryId: cookiesCategory.id,
             coffeeShopId: coffeeShop.id,
           },
           {
             name: "Cookie Nozes Crocantes®",
             description:
-              "Elegante e cheio de personalidade, este cookie combina a suavidade de uma massa amanteigada com a crocância marcante de nozes cuidadosamente selecionadas. O sabor levemente tostado das nozes se mistura perfeitamente com o chocolate meio amargo, criando uma experiência rica e equilibrada.",
+              "Cookie artesanal de massa amanteigada com nozes selecionadas e gotas de chocolate meio amargo. As nozes levemente tostadas adicionam crocância e aroma, enquanto o interior permanece macio e saboroso, criando uma combinação sofisticada e equilibrada.",
             ingredients: [
               "Farinha de trigo selecionada",
               "Massa amanteigada premium",
@@ -183,14 +183,14 @@ const main = async () => {
             ],
             price: 22.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSG5pxC2beTMiF0Uv72WBaGu1odwsJfQ6pqNYL",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSL6wFtVZvB2XbwtsQPGlRmxzgk7AyN9ZYWeqp",
             menuCategoryId: cookiesCategory.id,
             coffeeShopId: coffeeShop.id,
           },
           {
             name: "Cookie ChocoWhite Elegance®",
             description:
-              "Delicado e sofisticado, este cookie oferece uma experiência mais suave e cremosa, perfeita para quem aprecia sabores equilibrados. Sua massa amanteigada, levemente dourada, envolve pedaços generosos de chocolate branco que se tornam incrivelmente cremosos durante o preparo.",
+              "Cookie delicado preparado com massa amanteigada levemente dourada e pedaços generosos de chocolate branco. Seu interior macio e cremoso contrasta com a superfície suavemente crocante, criando uma combinação elegante, doce e extremamente aconchegante.",
             ingredients: [
               "Farinha de trigo selecionada",
               "Massa amanteigada premium",
@@ -201,7 +201,7 @@ const main = async () => {
             ],
             price: 26.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSdzDascTXa4AhyxPSUg9mbkGIpuMznJ7v5cL2",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSX1yfW87KCT6rObB5qvh3As1MSwQ28toxupl0",
             menuCategoryId: cookiesCategory.id,
             coffeeShopId: coffeeShop.id,
           },
@@ -220,7 +220,7 @@ const main = async () => {
           {
             name: "Croissant Presunto & Queijo Premium",
             description:
-              "Uma versão recheada que combina a leveza do croissant com um recheio cremoso e saboroso. O presunto selecionado e o queijo derretido criam uma combinação clássica, perfeita para qualquer momento do dia.",
+              "Croissant artesanal de massa folhada leve, dourada e amanteigada, recheado com presunto selecionado e queijo muçarela derretido. A combinação entre a crocância externa e o recheio quente e cremoso transforma um clássico em um lanche ainda mais especial.",
             ingredients: [
               "Massa folhada amanteigada",
               "Presunto selecionado",
@@ -231,14 +231,14 @@ const main = async () => {
             ],
             price: 14.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSPyoI3zfqKOBQaIU26cbHnm0seXp39R5jL8ov",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSQpBtdUjkrbvz7nKSPhW9aduEYOXGMfTyUi6Z",
             menuCategoryId: snacksCategory.id,
             coffeeShopId: coffeeShop.id,
           },
           {
             name: "Sanduíche Natural Fresh",
             description:
-              "Leve, equilibrado e refrescante, ideal para quem busca uma opção mais saudável sem abrir mão do sabor. Preparado com ingredientes frescos e selecionados, traz uma combinação suave e deliciosa.",
+              "Sanduíche leve preparado com pão integral artesanal, frango desfiado temperado, alface crocante, tomate, cenoura fresca e maionese suave. Uma combinação equilibrada de sabores e texturas, ideal para quem procura uma refeição prática, fresca e saborosa.",
             ingredients: [
               "Pão integral artesanal",
               "Peito de frango desfiado temperado",
@@ -250,25 +250,25 @@ const main = async () => {
             ],
             price: 16.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSc7G7QNId2AyqY3ixNpHZWcrwXVIB6fDjlsJC",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSVe5VaaGgT4OrLRDaJHbw3G95Uxqugk7F8CYe",
             menuCategoryId: snacksCategory.id,
             coffeeShopId: coffeeShop.id,
           },
           {
             name: "Toast Caprese Gourmet",
             description:
-              "Inspirado na clássica combinação italiana, este toast une leveza e sofisticação. O pão levemente tostado contrasta com a cremosidade do queijo e o frescor dos ingredientes.",
+              "Toast artesanal preparado com pão levemente tostado, queijo cremoso, ingredientes frescos, manjericão e um delicado toque de azeite extravirgem. A combinação entre crocância, frescor e cremosidade cria um lanche aromático, equilibrado e cheio de personalidade.",
             ingredients: [
               "Pão artesanal tostado",
               "Queijo muçarela de búfala",
-              "Carne desfiada EXTREMAMENTE suculenta",
+              "Tomate fresco selecionado",
               "Folhas de manjericão",
               "Azeite de oliva extra virgem",
               "Toque de sal refinado",
             ],
             price: 18.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSYDv0jVk7gicFK3GRvaO4uSwnLW8xIQPsN2jY",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSS7cRoKP4TPGio1hIQx7XAuHLq98jWJ6ODNla",
             menuCategoryId: snacksCategory.id,
             coffeeShopId: coffeeShop.id,
           },
@@ -287,7 +287,7 @@ const main = async () => {
           {
             name: "Café Coado Especial®",
             description:
-              "Suave e aromático, preparado lentamente para preservar todas as notas naturais do café. Uma opção equilibrada e perfeita para qualquer momento do dia.",
+              "Café especial preparado lentamente com grãos selecionados e moídos na hora para preservar seus aromas e sabores naturais. A extração controlada resulta em uma bebida suave, equilibrada e aromática, perfeita para apreciar com calma em qualquer momento do dia.",
             ingredients: [
               "Café moído na hora (grãos selecionados)",
               "Água filtrada aquecida",
@@ -296,14 +296,14 @@ const main = async () => {
             ],
             price: 7.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSPC9kATfqKOBQaIU26cbHnm0seXp39R5jL8ov",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSRfpevb80zG7c8kFE19qou5sK3hSxtlHAf4Vm",
             menuCategoryId: drinksCategory.id,
             coffeeShopId: coffeeShop.id,
           },
           {
             name: "Cappuccino Cremoso Premium®",
             description:
-              "Uma combinação perfeita entre café, leite vaporizado e uma espuma cremosa e aveludada. Finalizado com um leve toque de chocolate, é uma bebida equilibrada e extremamente aconchegante.",
+              "Cappuccino preparado com café espresso selecionado, leite vaporizado e espuma cremosa de textura aveludada. Finalizado com chocolate premium e um delicado toque de canela, combina intensidade e suavidade em uma bebida quente, aromática e aconchegante.",
             ingredients: [
               "Café espresso selecionado",
               "Leite vaporizado cremoso",
@@ -314,14 +314,14 @@ const main = async () => {
             ],
             price: 12.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utST6NZ9JSXEsNbBC206pFQPtVyjK91wDfR3Ax7",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSGnlU7feTMiF0Uv72WBaGu1odwsJfQ6pqNYL5",
             menuCategoryId: drinksCategory.id,
             coffeeShopId: coffeeShop.id,
           },
           {
             name: "Mocha Chocolate Supremo®",
             description:
-              "Uma bebida intensa e indulgente que combina café e chocolate de forma equilibrada. Cremosa e envolvente, é perfeita para quem quer algo mais doce e marcante.",
+              "Uma combinação envolvente de café espresso, leite vaporizado e chocolate meio amargo derretido. A espuma aveludada e a finalização com cacau acrescentam cremosidade e intensidade, criando uma bebida marcante para quem ama a união entre café e chocolate.",
             ingredients: [
               "Café espresso selecionado",
               "Leite vaporizado cremoso",
@@ -331,7 +331,29 @@ const main = async () => {
             ],
             price: 14.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utS9WEvA7hkBc0Ta4lIEn3vDHLjU1QKGrXWhOYy",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSYSXxyWk7gicFK3GRvaO4uSwnLW8xIQPsN2jY",
+            menuCategoryId: drinksCategory.id,
+            coffeeShopId: coffeeShop.id,
+          },
+          {
+            name: "Coca-cola",
+            description:
+              "Coca-Cola servida bem gelada, com sabor marcante e refrescante para acompanhar os diferentes produtos do nosso cardápio. Uma escolha clássica para combinar com lanches, cookies e sobremesas, trazendo equilíbrio e refrescância para qualquer momento do dia.",
+            ingredients: [],
+            price: 7.9,
+            imageUrl:
+              "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQJS1b33q29eEsh0CVmOywrqx1UPnJpRGcHN5v",
+            menuCategoryId: drinksCategory.id,
+            coffeeShopId: coffeeShop.id,
+          },
+          {
+            name: "Fanta Laranja",
+            description:
+              "Fanta Laranja servida bem gelada, trazendo seu sabor cítrico, doce e refrescante para acompanhar diferentes opções do cardápio. Uma bebida leve e descontraída que combina especialmente com lanches, cookies e outras escolhas para qualquer momento do dia.",
+            ingredients: [],
+            price: 7.9,
+            imageUrl:
+              "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQW7Kxm9gniS9XCLQu7Nb4jvBYZze16goaOqsK",
             menuCategoryId: drinksCategory.id,
             coffeeShopId: coffeeShop.id,
           },
@@ -342,11 +364,11 @@ const main = async () => {
         data: {
           name: "Água Mineral",
           description:
-            "Essencial e pura, perfeita para acompanhar qualquer momento com leveza e equilíbrio.",
+            "Água mineral leve e refrescante, servida gelada para acompanhar qualquer escolha do nosso cardápio. Uma opção simples e essencial para equilibrar a experiência, refrescar o paladar entre cada mordida e acompanhar cafés, doces, sobremesas ou lanches.",
           ingredients: [],
           price: 3.9,
           imageUrl:
-            "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSg7pj14GB9utSCYGQT0yN68EAzIZ7JgwL3oRc",
+            "https://u9a6wmr3as.ufs.sh/f/jppBrbk0cChQ7i05S5tkc0L9oMIXZsFJtwnBh2KCz3y6uSW1",
           menuCategoryId: drinksCategory.id,
           coffeeShopId: coffeeShop.id,
         },
@@ -364,29 +386,29 @@ const main = async () => {
           {
             name: "Sorvete com Cookie Supreme®",
             description:
-              "Uma combinação irresistível que une o melhor dos dois mundos. Nosso sorvete artesanal cremoso é servido com um cookie gourmet levemente aquecido, criando um contraste perfeito entre quente e frio. A cada colherada, a textura macia do sorvete se mistura com a crocância do cookie e o chocolate derretido, proporcionando uma experiência indulgente e marcante.",
+              "Sorvete artesanal cremoso servido com um cookie gourmet levemente aquecido, criando um delicioso contraste entre quente e frio. O interior macio do cookie, o chocolate derretido e a cremosidade do sorvete transformam cada colherada em uma experiência especial.",
             ingredients: [],
             price: 19.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSQEP4dKjkrbvz7nKSPhW9aduEYOXGMfTyUi6Z",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSXn3yMFF7KCT6rObB5qvh3As1MSwQ28toxupl",
             menuCategoryId: desertsCategory.id,
             coffeeShopId: coffeeShop.id,
           },
           {
             name: "Fatia Bolo de Chocolate Premium®",
             description:
-              "Uma sobremesa rica e indulgente, com recheio cremoso de chocolate e textura aveludada. Ideal para quem busca uma experiência intensa e sofisticada em cada pedaço.",
+              "Fatia generosa de bolo de chocolate preparada para quem aprecia sabores intensos. A massa macia e úmida combina com um recheio cremoso e uma textura aveludada, criando uma sobremesa rica, equilibrada e perfeita para acompanhar um café recém-preparado.",
             ingredients: [],
             price: 15.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSBsOo0dwjKYegl0kuQqJ39B7x8mtCnIPE2aoc",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSvRjNW8p7zYvGMSwiKfTNZOokREgqhbs6dCBL",
             menuCategoryId: desertsCategory.id,
             coffeeShopId: coffeeShop.id,
           },
           {
             name: "Taça De Morango Delight®",
             description:
-              "Uma sobremesa elegante e irresistível, que combina camadas de sorvete macio com morangos frescos e um creme leve e aveludado. Finalizada com calda de morango, é uma opção equilibrada entre intensidade e frescor, perfeita para quem busca uma experiência completa em cada colherada.",
+              "Taça cremosa preparada com camadas de sorvete, morangos frescos e creme suave, finalizada com uma deliciosa calda de morango. O contraste entre o frescor da fruta e a cremosidade da sobremesa cria uma experiência leve, equilibrada e irresistível.",
             ingredients: [],
             price: 18.9,
             imageUrl:
@@ -399,14 +421,16 @@ const main = async () => {
     },
     {
       maxWait: 10000,
-      timeout: 60000,
-    },
+      timeout: 30000,
+    }
   );
 };
 
 main()
   .catch((e) => {
-    throw e;
+    console.error("Erro ao executar seed:");
+    console.error(e);
+    process.exit(1);
   })
   .finally(async () => {
     await prismaClient.$disconnect();
