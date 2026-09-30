@@ -13,7 +13,6 @@ const ProductDrawer = ({
   open,
   onOpenChange,
   product,
-  coffeeshop,
 }: ProductDrawerProps) => {
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
@@ -55,7 +54,8 @@ const ProductDrawer = ({
               </div>
             </div>
             <div className="relative min-h-full z-10 mt-[310px] py-8 px-6 rounded-xl w-full bg-white">
-              <h1 className="font-lufga font-semibold text-lg mb-4">{product.name}</h1>
+              <h1 className="font-lufga font-semibold text-lg mb-1">{product.name}</h1>
+              <p className="font-lufga text-[--secondary] text-sm">{product.description}</p>
             </div>
           </div>
         )}
