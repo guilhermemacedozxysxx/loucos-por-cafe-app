@@ -396,6 +396,35 @@ const main = async () => {
           },
         ],
       });
+
+      await tx.productOptionGroup.create({
+        data: {
+          name: "Recheio",
+          required: true,
+          minSelect: 1,
+          maxSelect: 1,
+          options: {
+            create: [
+              {
+                name: "Recheio de chocolate",
+                price: 3.0,
+              },
+              {
+                name: "Recheio de morango",
+                price: 3.0,
+              },
+              {
+                name: "Recheio de ovomaltine",
+                price: 4.5,
+              },
+              {
+                name: "Recheio de nutella",
+                price: 5.0,
+              },
+            ],
+          },
+        },
+      });
     },
     {
       maxWait: 10000,
