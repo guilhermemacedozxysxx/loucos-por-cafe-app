@@ -55,7 +55,13 @@ const ProductDrawer = ({
             </div>
             <div className="relative min-h-full z-10 mt-[310px] py-8 px-6 rounded-xl w-full bg-white">
               <h1 className="font-lufga font-semibold text-lg mb-1">{product.name}</h1>
-              <p className="font-lufga text-[--secondary] text-sm">{product.description}</p>
+              <p className="font-lufga text-[--muted-foreground] text-sm ">{product.description}</p>
+              <span className="font-lufga font-semibold mt-4 text-[--secondary] text-lg block">
+                {new Intl.NumberFormat("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
+                }).format(product.price)}
+              </span>
             </div>
           </div>
         )}
