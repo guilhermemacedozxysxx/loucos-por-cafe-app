@@ -1,15 +1,16 @@
 "use client";
 
-import { Product } from "@prisma/client";
+import { CoffeeShop, Product } from "@prisma/client";
 import Image from "next/image";
 import { useState } from "react";
 import ProductDrawer from "./product-drawer";
 
 interface ProductsProps {
   products: Product[];
+  coffeeshop: CoffeeShop;
 }
 
-const Products = ({ products }: ProductsProps) => {
+const Products = ({ products, coffeeshop }: ProductsProps) => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -54,6 +55,7 @@ const Products = ({ products }: ProductsProps) => {
 
       <ProductDrawer 
         product={selectedProduct}
+        coffeeshop={coffeeshop}
         open={drawerOpen} 
         onOpenChange={setDrawerOpen} />
     </div>

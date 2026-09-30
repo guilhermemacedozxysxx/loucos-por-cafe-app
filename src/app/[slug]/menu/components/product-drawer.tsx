@@ -1,9 +1,10 @@
 import { Drawer, DrawerContent, DrawerTitle } from "@/components/ui/drawer";
-import { Product } from "@prisma/client";
+import { CoffeeShop, Product } from "@prisma/client";
 import Image from "next/image";
 
 interface ProductDrawerProps {
   product: Product | null;
+  coffeeshop: CoffeeShop;
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }

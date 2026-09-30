@@ -91,7 +91,7 @@ const CoffeeShopCategories = ({ coffeeshop }: CoffeeShopCategoriesProps) => {
       <h3 className="font-lufga font-semibold text-lg px-6 mb-4">
         {selectedCategory.name}
       </h3>
-      <Products products={selectedCategory.products} />
+      <Products products={selectedCategory.products} coffeeshop={coffeeshop} />
     </div>
   );
 };
