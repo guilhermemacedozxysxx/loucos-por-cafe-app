@@ -53,18 +53,6 @@ const DrawerContent = React.forwardRef<
     >
       <div className="mx-auto w-[100px] rounded-full bg-muted" />
 
-      <div className="mx-6 flex h-16 items-center rounded-full bg-white px-5">
-        <div className="flex flex-col">
-          <h3 className="font-lufga text-sm font-semibold text-black">
-            Loucos por café ®
-          </h3>
-
-          <p className="font-lufga text-xs text-gray-400">
-            Cafeteria · 15 - 20 min
-          </p>
-        </div>
-      </div>
-
       {children}
     </DrawerPrimitive.Content>
   </DrawerPortal>
