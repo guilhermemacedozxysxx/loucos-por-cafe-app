@@ -22,41 +22,53 @@ const ProductDrawer = ({
         </DrawerTitle>
 
         {product && (
-          <div className="relative h-80 w-full">
-            <Image
-              src={product.imageUrl}
-              alt={product.name}
-              fill
-              sizes="100vw"
-              className="object-cover"
-            />
+          <div className="h-full overflow-y-scroll">
+            {/* IMAGEM */}
+            <div className="relative h-80 w-full shrink-0">
+              <Image
+                src={product.imageUrl}
+                alt={product.name}
+                fill
+                sizes="100vw"
+                className="object-cover"
+              />
 
-            <div className="absolute bottom-5 left-6 z-10">
-              <div className="flex h-12 w-72 items-center gap-3 rounded-full bg-white px-2">
-                <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full bg-[--primary]">
-                  <Image
-                    src="/images/LOGO.svg"
-                    alt="Logo Loucos por Café"
-                    fill
-                    className="object-cover mr-1"
-                  />
-                </div>
+              {/* CARD DA CAFETERIA */}
+              <div className="absolute bottom-5 left-6 z-10">
+                <div className="flex h-12 w-72 items-center gap-3 rounded-full bg-white px-2">
+                  <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full bg-[--primary]">
+                    <Image
+                      src="/images/LOGO.svg"
+                      alt="Logo Loucos por Café"
+                      fill
+                      className="mr-1 object-cover"
+                    />
+                  </div>
 
-                <div className="flex flex-col">
-                  <h3 className="font-lufga text-xs font-medium text-black">
-                    Loucos por café ®
-                  </h3>
+                  <div className="flex flex-col">
+                    <h3 className="font-lufga text-xs font-medium text-black">
+                      Loucos por café ®
+                    </h3>
 
-                  <p className="font-lufga text-[10px] text-gray-400">
-                    Cafeteria · 15 - 20 min
-                  </p>
+                    <p className="font-lufga text-[10px] text-gray-400">
+                      Cafeteria · 15 - 20 min
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="relative min-h-full z-10 mt-[310px] py-8 px-6 rounded-xl w-full bg-white">
-              <h1 className="font-lufga font-semibold text-lg mb-1">{product.name}</h1>
-              <p className="font-lufga text-[--muted-foreground] text-sm ">{product.description}</p>
-              <span className="font-lufga font-semibold mt-4 text-[--secondary] text-lg block">
+
+            {/* CONTEÚDO */}
+            <div className="relative z-10 -mt-3 min-h-[700px] w-full rounded-t-xl bg-white px-6 py-8">
+              <h1 className="mb-1 font-lufga text-lg font-semibold">
+                {product.name}
+              </h1>
+
+              <p className="font-lufga text-sm text-[--muted-foreground]">
+                {product.description}
+              </p>
+
+              <span className="mt-4 block font-lufga text-lg font-semibold text-[--secondary]">
                 {new Intl.NumberFormat("pt-BR", {
                   style: "currency",
                   currency: "BRL",
