@@ -30,7 +30,7 @@ const ProductDrawer = ({
 }: ProductDrawerProps) => {
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
-      <DrawerContent className="h-[90dvh] overflow-hidden rounded-t-[32px] border-0 bg-white">
+      <DrawerContent className="max-h-[90dvh] overflow-hidden rounded-t-[32px] border-0 bg-white">
         <DrawerTitle className="sr-only">
           Detalhes do produto
         </DrawerTitle>
@@ -74,7 +74,7 @@ const ProductDrawer = ({
             </div>
 
             {/* CONTEÚDO */}
-            <div className="relative z-10 -mt-3 min-h-[700px] w-full rounded-t-xl bg-white px-6 py-8">
+            <div className="relative z-10 -mt-3 w-full rounded-t-xl bg-white px-6 py-8">
               <h1 className="mb-1 font-lufga text-lg font-semibold">
                 {product.name}
               </h1>

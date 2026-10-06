@@ -6,6 +6,7 @@ import { Prisma } from "@prisma/client";
 import { ClockIcon } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+
 import Products from "./products";
 
 type CoffeeShopWithCategories = Prisma.CoffeeShopGetPayload<{
@@ -34,40 +35,23 @@ interface CoffeeShopCategoriesProps {
   coffeeshop: CoffeeShopWithCategories;
 }
 
-type MenuCategoriesWithProducts = Prisma.MenuCategoryGetPayload<{
-  include: {
-    products: {
-      include: {
-        optionGroups: {
-          include: {
-            group: {
-              include: {
-                options: true;
-              };
-            };
-          };
-        };
-      };
-    };
-  };
-}>;
-
 const CoffeeShopCategories = ({ coffeeshop }: CoffeeShopCategoriesProps) => {
-  const [selectedCategory, setSelectedCategory] =
-    useState<MenuCategoriesWithProducts>(coffeeshop.menuCategories[0]);
+  const [selectedCategoryId, setSelectedCategoryId] = useState(
+    coffeeshop.menuCategories[0]?.id,
+  );
 
-  const handleCategoryClick = (category: MenuCategoriesWithProducts) => {
-    setSelectedCategory(category);
-  };
+  const selectedCategory = coffeeshop.menuCategories.find(
+    (category) => category.id === selectedCategoryId,
+  );
 
-  const getCategoryButtonVariant = (category: MenuCategoriesWithProducts) => {
-    return selectedCategory.id == category.id ? "default" : "secondary";
-  };
+  if (!selectedCategory) {
+    return null;
+  }
 
   return (
-    <div className="relative z-50 mt-[-1.5rem] rounded-t-3xl pt-1 bg-white">
-      <div className="flex items-center gap-3 m-5">
-        <div className="flex justify-center w-14 h-14 bg-[--primary] rounded-xl">
+    <div className="relative z-50 mt-[-1.5rem] rounded-t-3xl bg-white pt-1">
+      <div className="m-5 flex items-center gap-3">
+        <div className="flex h-14 w-14 justify-center rounded-xl bg-[--primary]">
           <Image
             src="/images/LOGO.svg"
             alt="Loucos por Café"
@@ -78,34 +62,36 @@ const CoffeeShopCategories = ({ coffeeshop }: CoffeeShopCategoriesProps) => {
         </div>
 
         <div>
-          <h2 className="font-lufga font-semibold text-lg">
+          <h2 className="font-lufga text-lg font-semibold">
             {coffeeshop.name}
           </h2>
-          <p className="font-lufga font-normal text-[secondary] opacity-40 text-sm">
-            Cafeteria
-          </p>
+
+          <p className="font-lufga text-sm font-normal opacity-40">Cafeteria</p>
         </div>
 
-        <div className="w-16 h-6 ml-14 mt-2 border border-neutral-200 bg-white rounded-full flex px-3 gap-1">
+        <div className="ml-14 mt-2 flex h-6 w-16 gap-1 rounded-full border border-neutral-200 bg-white px-3">
           <div className="mt-[2px]">
-            <i className="fi fi-sr-star text-[--primary]"></i>
+            <i className="fi fi-sr-star text-[--primary]" />
           </div>
+
           <div className="font-lufga font-medium">5.0</div>
         </div>
       </div>
 
-      <div className="m-5 -mt-2 font-lufga text-[--primary] flex gap-1 items-center text-sm">
+      <div className="m-5 -mt-2 flex items-center gap-1 font-lufga text-sm text-[--primary]">
         <ClockIcon size={16} />
         <p>Aberto até as 23:00</p>
       </div>
 
-      <ScrollArea className="font-lufga font-semibold text-[--muted-foreground] w-full">
-        <div className="flex w-max gap-4 p-5 -mt-4">
+      <ScrollArea className="w-full font-lufga font-semibold text-[--muted-foreground]">
+        <div className="-mt-4 flex w-max gap-4 p-5">
           {coffeeshop.menuCategories.map((category) => (
             <Button
-              onClick={() => handleCategoryClick(category)}
               key={category.id}
-              variant={getCategoryButtonVariant(category)}
+              onClick={() => setSelectedCategoryId(category.id)}
+              variant={
+                selectedCategoryId === category.id ? "default" : "secondary"
+              }
               size="sm"
               className="rounded-full"
             >
@@ -113,12 +99,14 @@ const CoffeeShopCategories = ({ coffeeshop }: CoffeeShopCategoriesProps) => {
             </Button>
           ))}
         </div>
+
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
 
-      <h3 className="font-lufga font-semibold text-lg px-6 mb-4">
+      <h3 className="mb-4 px-6 font-lufga text-lg font-semibold">
         {selectedCategory.name}
       </h3>
+
       <Products products={selectedCategory.products} coffeeshop={coffeeshop} />
     </div>
   );
