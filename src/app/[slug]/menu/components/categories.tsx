@@ -11,7 +11,21 @@ import Products from "./products";
 type CoffeeShopWithCategories = Prisma.CoffeeShopGetPayload<{
   include: {
     menuCategories: {
-      include: { products: true };
+      include: {
+        products: {
+          include: {
+            optionGroups: {
+              include: {
+                group: {
+                  include: {
+                    options: true;
+                  };
+                };
+              };
+            };
+          };
+        };
+      };
     };
   };
 }>;
@@ -21,7 +35,21 @@ interface CoffeeShopCategoriesProps {
 }
 
 type MenuCategoriesWithProducts = Prisma.MenuCategoryGetPayload<{
-  include: { products: true };
+  include: {
+    products: {
+      include: {
+        optionGroups: {
+          include: {
+            group: {
+              include: {
+                options: true;
+              };
+            };
+          };
+        };
+      };
+    };
+  };
 }>;
 
 const CoffeeShopCategories = ({ coffeeshop }: CoffeeShopCategoriesProps) => {
