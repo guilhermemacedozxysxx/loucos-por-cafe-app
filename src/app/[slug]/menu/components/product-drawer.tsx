@@ -90,6 +90,9 @@ const ProductDrawer = ({ open, onOpenChange, product }: ProductDrawerProps) => {
                 </div>
               </div>
 
+              <div className="h-[300px] rounded-xl bg-gray-100 p-4">
+                
+              </div>
             </div>
           </div>
         )}
