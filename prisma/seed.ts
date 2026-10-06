@@ -427,10 +427,15 @@ const main = async () => {
         },
       });
 
-      const cookieProducts = await tx.product.findMany({
+      const productsWithFilling = await tx.product.findMany({
         where: {
           coffeeShopId: coffeeShop.id,
-          menuCategoryId: cookiesCategory.id,
+          menuCategoryId: {
+            in: [
+              cookiesCategory.id,
+              lancamentosCategory.id,
+            ],
+          },
         },
         select: {
           id: true,
@@ -438,7 +443,7 @@ const main = async () => {
       });
 
       await tx.productOptionGroupProduct.createMany({
-        data: cookieProducts.map((product: { id: string }) => ({
+        data: productsWithFilling.map((product: { id: string }) => ({
           productId: product.id,
           groupId: fillingGroup.id,
         })),
