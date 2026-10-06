@@ -1,17 +1,31 @@
 "use client";
 
-import { CoffeeShop, Product } from "@prisma/client";
+import { CoffeeShop, Prisma } from "@prisma/client";
 import Image from "next/image";
 import { useState } from "react";
 import ProductDrawer from "./product-drawer";
 
+type ProductWithOptions = Prisma.ProductGetPayload<{
+  include: {
+    optionGroups: {
+      include: {
+        group: {
+          include: {
+            options: true;
+          };
+        };
+      };
+    };
+  };
+}>;
 interface ProductsProps {
-  products: Product[];
+  products: ProductWithOptions[];
   coffeeshop: CoffeeShop;
 }
 
 const Products = ({ products, coffeeshop }: ProductsProps) => {
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+const [selectedProduct, setSelectedProduct] =
+  useState<ProductWithOptions | null>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
