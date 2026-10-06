@@ -9,17 +9,11 @@ interface ProductDrawerProps {
   onOpenChange: (open: boolean) => void;
 }
 
-const ProductDrawer = ({
-  open,
-  onOpenChange,
-  product,
-}: ProductDrawerProps) => {
+const ProductDrawer = ({ open, onOpenChange, product }: ProductDrawerProps) => {
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerContent className="h-[90dvh] overflow-hidden rounded-t-[32px] border-0 bg-white">
-        <DrawerTitle className="sr-only">
-          Detalhes do produto
-        </DrawerTitle>
+        <DrawerTitle className="sr-only">Detalhes do produto</DrawerTitle>
 
         {product && (
           <div className="h-full overflow-y-scroll">
@@ -74,6 +68,28 @@ const ProductDrawer = ({
                   currency: "BRL",
                 }).format(product.price)}
               </span>
+
+              {/* AREA DOS RECHEIOS */}
+              <div className="mt-8 space-y-4">
+                <div>
+                  <h2 className="font-lufga text-lg font-semibold text-[--muted-foreground]">
+                    Recheio
+                  </h2>
+
+                  <div className="flex w-full justify-between">
+                    <p className="font-lufga text-sm text-[--muted-foreground]">
+                      Escolha 1 opção
+                    </p>
+
+                    <div className="w-[86px] h-5 bg-black rounded-sm uppercase flex items-center justify-center">
+                      <span className="font-lufga text-white text-[10px] font-semibold">
+                        OBRIGATÓRIO
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         )}
