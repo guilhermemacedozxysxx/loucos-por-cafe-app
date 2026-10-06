@@ -1,9 +1,22 @@
 import { Drawer, DrawerContent, DrawerTitle } from "@/components/ui/drawer";
-import { CoffeeShop, Product } from "@prisma/client";
+import { CoffeeShop, Prisma } from "@prisma/client";
 import Image from "next/image";
 
+type ProductWithOptions = Prisma.ProductGetPayload<{
+  include: {
+    optionGroups: {
+      include: {
+        group: {
+          include: {
+            options: true;
+          };
+        };
+      };
+    };
+  };
+}>;
 interface ProductDrawerProps {
-  product: Product | null;
+  product: ProductWithOptions | null;
   coffeeshop: CoffeeShop;
   open: boolean;
   onOpenChange: (open: boolean) => void;
