@@ -22,6 +22,7 @@ const main = async () => {
         });
       }
 
+      await tx.productOptionGroup.deleteMany();
       await tx.coffeeShop.deleteMany();
 
       const coffeeShop = await tx.coffeeShop.create({
@@ -397,7 +398,7 @@ const main = async () => {
         ],
       });
 
-      await tx.productOptionGroup.create({
+      const fillingGroup = await tx.productOptionGroup.create({
         data: {
           name: "Recheio",
           required: true,
@@ -424,6 +425,23 @@ const main = async () => {
             ],
           },
         },
+      });
+
+      const cookieProducts = await tx.product.findMany({
+        where: {
+          coffeeShopId: coffeeShop.id,
+          menuCategoryId: cookiesCategory.id,
+        },
+        select: {
+          id: true,
+        },
+      });
+
+      await tx.productOptionGroupProduct.createMany({
+        data: cookieProducts.map((product: { id: string }) => ({
+          productId: product.id,
+          groupId: fillingGroup.id,
+        })),
       });
     },
     {
