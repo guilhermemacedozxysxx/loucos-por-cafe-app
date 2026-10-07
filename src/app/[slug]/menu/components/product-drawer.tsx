@@ -115,13 +115,13 @@ const ProductDrawer = ({
                   </div>
 
                   {/* OPÇÕES */}
-                  <div>
+                  <div className="py-7">
                     {group.options.map((option) => (
                       <div
                         key={option.id}
                         className="flex items-center justify-between py-3"
                       >
-                        <p className="font-lufga text-sm">
+                        <p className="font-lufga font-medium text-lg">
                           {option.name}
                         </p>
 
