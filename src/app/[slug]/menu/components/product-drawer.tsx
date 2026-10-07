@@ -1,6 +1,9 @@
+"use client";
+
 import { Drawer, DrawerContent, DrawerTitle } from "@/components/ui/drawer";
 import { CoffeeShop, Prisma } from "@prisma/client";
 import Image from "next/image";
+import { useState } from "react";
 
 type ProductWithOptions = Prisma.ProductGetPayload<{
   include: {
@@ -28,6 +31,8 @@ const ProductDrawer = ({
   onOpenChange,
   product,
 }: ProductDrawerProps) => {
+
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerContent className="max-h-[90dvh] overflow-hidden rounded-t-[32px] border-0 bg-white">
@@ -114,20 +119,28 @@ const ProductDrawer = ({
                     </div>
                   </div>
 
-                  {/* OPÇÕES */}
-                  <div className="py-7">
-                    {group.options.map((option) => (
-                      <div
-                        key={option.id}
-                        className="flex items-center justify-between py-3"
-                      >
-                        <p className="font-lufga font-medium text-lg">
-                          {option.name}
-                        </p>
+              {/* OPÇÕES */}
+              <div className="py-7">
+                {group.options.map((option) => (
+                  <label
+                    key={option.id}
+                    className="flex cursor-pointer items-center justify-between py-3"
+                  >
+                    <p className="font-lufga text-lg font-medium">
+                      {option.name}
+                    </p>
 
-                      </div>
-                    ))}
-                  </div>
+                    <input
+                      type="radio"
+                      name={`option-${group.id}`}
+                      value={option.id}
+                      checked={selectedOption === option.id}
+                      onChange={() => setSelectedOption(option.id)}
+                      className="h-5 w-5 cursor-pointer border-[--muted-foreground] accent-[--primary]"
+                    />
+                  </label>
+                ))}
+              </div>
                 </div>
               ))}
             </div>
