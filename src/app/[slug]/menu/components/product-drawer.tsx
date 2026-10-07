@@ -115,7 +115,7 @@ const ProductDrawer = ({
                   </div>
 
                   {/* OPÇÕES */}
-                  <div className="rounded-xl bg-gray-100 p-4">
+                  <div>
                     {group.options.map((option) => (
                       <div
                         key={option.id}
@@ -125,13 +125,6 @@ const ProductDrawer = ({
                           {option.name}
                         </p>
 
-                        <p className="font-lufga text-sm">
-                          +{" "}
-                          {new Intl.NumberFormat("pt-BR", {
-                            style: "currency",
-                            currency: "BRL",
-                          }).format(option.price)}
-                        </p>
                       </div>
                     ))}
                   </div>
