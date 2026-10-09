@@ -430,12 +430,18 @@ const main = async () => {
       const productsWithFilling = await tx.product.findMany({
         where: {
           coffeeShopId: coffeeShop.id,
-          menuCategoryId: {
-            in: [
-              cookiesCategory.id,
-              lancamentosCategory.id,
-            ],
-          },
+          OR: [
+            {
+              menuCategoryId: cookiesCategory.id,
+            },
+            {
+              menuCategoryId: lancamentosCategory.id,
+              name: {
+                contains: "Cookie",
+                mode: "insensitive",
+              },
+            },
+          ],
         },
         select: {
           id: true,
