@@ -33,6 +33,8 @@ const ProductDrawer = ({
 }: ProductDrawerProps) => {
 
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [quantity, setQuantity] = useState(1);
+
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerContent className="flex max-h-[90dvh] flex-col overflow-hidden rounded-t-[32px] border-0 bg-white">
