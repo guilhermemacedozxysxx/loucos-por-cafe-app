@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Drawer, DrawerContent, DrawerTitle } from "@/components/ui/drawer";
@@ -34,6 +35,10 @@ const ProductDrawer = ({
 
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [quantity, setQuantity] = useState(1);
+
+  const increaseQuantity = () => {
+    setQuantity((previousQuantity) => previousQuantity + 1);
+  };
 
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
