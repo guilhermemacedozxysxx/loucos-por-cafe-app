@@ -40,6 +40,12 @@ const ProductDrawer = ({
     setQuantity((previousQuantity) => previousQuantity + 1);
   };
 
+  const decreaseQuantity = () => {
+    setQuantity((previousQuantity) =>
+      Math.max(1, previousQuantity - 1),
+    );
+  };
+
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerContent className="flex max-h-[90dvh] flex-col overflow-hidden rounded-t-[32px] border-0 bg-white">
