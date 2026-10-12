@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Drawer, DrawerContent, DrawerTitle } from "@/components/ui/drawer";
@@ -28,12 +27,7 @@ interface ProductDrawerProps {
   onOpenChange: (open: boolean) => void;
 }
 
-const ProductDrawer = ({
-  open,
-  onOpenChange,
-  product,
-}: ProductDrawerProps) => {
-
+const ProductDrawer = ({ open, onOpenChange, product }: ProductDrawerProps) => {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [quantity, setQuantity] = useState(1);
 
@@ -42,17 +36,15 @@ const ProductDrawer = ({
   };
 
   const decreaseQuantity = () => {
-    setQuantity((previousQuantity) =>
-      Math.max(1, previousQuantity - 1),
-    );
+    setQuantity((previousQuantity) => Math.max(1, previousQuantity - 1));
   };
+
+  const totalPrice = (product?.price ?? 0) * quantity;
 
   return (
     <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerContent className="flex max-h-[90dvh] flex-col overflow-hidden rounded-t-[32px] border-0 bg-white">
-        <DrawerTitle className="sr-only">
-          Detalhes do produto
-        </DrawerTitle>
+        <DrawerTitle className="sr-only">Detalhes do produto</DrawerTitle>
 
         {product && (
           <div className="h-full overflow-y-scroll">
@@ -123,42 +115,46 @@ const ProductDrawer = ({
                         {group.maxSelect === 1 ? "opção" : "opções"}
                       </p>
 
-                      {group.required && (
-                        group.options.some((option) => option.id === selectedOption) ? (
-                          <Check className="h-5 w-5 text-green-500" strokeWidth={3} />
+                      {group.required &&
+                        (group.options.some(
+                          (option) => option.id === selectedOption,
+                        ) ? (
+                          <Check
+                            className="h-5 w-5 text-green-500"
+                            strokeWidth={3}
+                          />
                         ) : (
                           <div className="flex h-5 w-[86px] items-center justify-center rounded-sm bg-black uppercase">
                             <span className="font-lufga text-[10px] font-semibold text-white">
                               OBRIGATÓRIO
                             </span>
                           </div>
-                        )
-                      )}
+                        ))}
                     </div>
                   </div>
 
-              {/* OPÇÕES */}
-              <div className="py-7">
-                {group.options.map((option) => (
-                  <label
-                    key={option.id}
-                    className="flex cursor-pointer items-center justify-between py-3"
-                  >
-                    <p className="font-lufga text-lg font-medium">
-                      {option.name}
-                    </p>
+                  {/* OPÇÕES */}
+                  <div className="py-7">
+                    {group.options.map((option) => (
+                      <label
+                        key={option.id}
+                        className="flex cursor-pointer items-center justify-between py-3"
+                      >
+                        <p className="font-lufga text-lg font-medium">
+                          {option.name}
+                        </p>
 
-                    <input
-                      type="radio"
-                      name={`option-${group.id}`}
-                      value={option.id}
-                      checked={selectedOption === option.id}
-                      onChange={() => setSelectedOption(option.id)}
-                      className="h-5 w-5 cursor-pointer border-[--muted-foreground] accent-[--primary]"
-                    />
-                  </label>
-                ))}
-              </div>
+                        <input
+                          type="radio"
+                          name={`option-${group.id}`}
+                          value={option.id}
+                          checked={selectedOption === option.id}
+                          onChange={() => setSelectedOption(option.id)}
+                          className="h-5 w-5 cursor-pointer border-[--muted-foreground] accent-[--primary]"
+                        />
+                      </label>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
