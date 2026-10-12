@@ -22,6 +22,7 @@ const main = async () => {
         });
       }
 
+      await tx.productOptionGroup.deleteMany();
       await tx.coffeeShop.deleteMany();
 
       const coffeeShop = await tx.coffeeShop.create({
@@ -48,7 +49,7 @@ const main = async () => {
           {
             name: "Montanha de Cookies Tradicionais®",
             description:
-              "Cookies artesanais empilhados, massa amanteigada, textura macia por dentro e crocante por fora, recheio generoso de chocolate.",
+              "Uma seleção generosa de cookies artesanais empilhados, preparados com massa amanteigada e assados cuidadosamente para alcançar o equilíbrio perfeito entre crocância e maciez. Cada cookie possui um interior macio e recheado com gotas de chocolate derretidas, criando uma experiência intensa e irresistível para compartilhar.",
             price: 39.9,
             imageUrl:
               "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSRgKGNV80zG7c8kFE19qou5sK3hSxtlHAf4Vm",
@@ -67,7 +68,7 @@ const main = async () => {
           {
             name: "Montanha Suprema de Cookies®",
             description:
-              "Cookies artesanais empilhados, massa amanteigada, recheio cremoso de Nutella®, creme de avelã intenso e cobertura extra.",
+              "Uma experiência criada para os verdadeiros apaixonados por cookies. Nossa Montanha Suprema reúne cookies artesanais empilhados, preparados com massa amanteigada e recheados generosamente com Nutella®. A combinação entre o interior macio, as gotas de chocolate e a cobertura extra de creme de avelã transforma cada camada em uma experiência extremamente cremosa e indulgente.",
             price: 49.9,
             imageUrl:
               "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSYOolUpk7gicFK3GRvaO4uSwnLW8xIQPsN2jY",
@@ -86,7 +87,7 @@ const main = async () => {
           {
             name: "Cookie Artesanal Individual®",
             description:
-              "Cookie recém-assado, massa amanteigada, interior macio, gotas de chocolate derretidas e sabor marcante.",
+              "Um cookie artesanal preparado para ser apreciado em qualquer momento do dia. Recém-assado, possui uma massa amanteigada delicadamente dourada, com interior extremamente macio e gotas de chocolate que derretem a cada mordida. Uma opção simples, clássica e cheia de sabor.",
             price: 9.9,
             imageUrl:
               "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utS3hTEJgMDAetMvqdV7gh2mniQR9BcKYsP5fGF",
@@ -104,10 +105,10 @@ const main = async () => {
           {
             name: "Cappuccino Cremoso Especial®",
             description:
-              "Café espresso encorpado, leite vaporizado, espuma cremosa e finalização suave de chocolate ou canela.",
+              "Uma bebida clássica preparada com café espresso encorpado, leite vaporizado e uma camada generosa de espuma cremosa. A combinação cria uma textura suave e aveludada, finalizada com chocolate em pó premium para trazer ainda mais aroma e sabor.",
             price: 14.9,
             imageUrl:
-              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSxPwhVHBB5IkSCEM4u0Zd63X1JiN2RW8Qhpfc",
+              "https://z58avo7iib.ufs.sh/f/gn7SbfGB9utSlCsLoU6iGjCVdK9k8zYmW0nE2qMZNLIRyutx",
             menuCategoryId: lancamentosCategory.id,
             coffeeShopId: coffeeShop.id,
             ingredients: [
@@ -220,7 +221,7 @@ const main = async () => {
           {
             name: "Croissant Presunto & Queijo Premium",
             description:
-              "Uma versão recheada que combina a leveza do croissant com um recheio cremoso e saboroso. O presunto selecionado e o queijo derretido criam uma combinação clássica, perfeita para qualquer momento do dia.",
+              "Um croissant artesanal de massa folhada leve e amanteigada, assado até atingir uma superfície dourada e delicadamente crocante. Recheado com presunto selecionado e queijo muçarela derretido, oferece uma combinação clássica, cremosa e extremamente saborosa.",
             ingredients: [
               "Massa folhada amanteigada",
               "Presunto selecionado",
@@ -238,7 +239,7 @@ const main = async () => {
           {
             name: "Sanduíche Natural Fresh",
             description:
-              "Leve, equilibrado e refrescante, ideal para quem busca uma opção mais saudável sem abrir mão do sabor. Preparado com ingredientes frescos e selecionados, traz uma combinação suave e deliciosa.",
+              "Uma opção leve, equilibrada e refrescante, preparada com ingredientes selecionados para quem busca uma refeição saborosa sem abrir mão da leveza. O pão integral artesanal acompanha um recheio cremoso de frango desfiado, vegetais frescos e ervas finas.",
             ingredients: [
               "Pão integral artesanal",
               "Peito de frango desfiado temperado",
@@ -257,7 +258,7 @@ const main = async () => {
           {
             name: "Toast Caprese Gourmet",
             description:
-              "Inspirado na clássica combinação italiana, este toast une leveza e sofisticação. O pão levemente tostado contrasta com a cremosidade do queijo e o frescor dos ingredientes.",
+              "Uma combinação inspirada na culinária italiana, preparada sobre pão artesanal levemente tostado. A textura crocante do pão contrasta com a cremosidade da muçarela de búfala e a suculência da carne desfiada, finalizada com manjericão fresco e azeite de oliva extra virgem.",
             ingredients: [
               "Pão artesanal tostado",
               "Queijo muçarela de búfala",
@@ -287,7 +288,7 @@ const main = async () => {
           {
             name: "Café Coado Especial®",
             description:
-              "Suave e aromático, preparado lentamente para preservar todas as notas naturais do café. Uma opção equilibrada e perfeita para qualquer momento do dia.",
+              "Um café suave e aromático preparado lentamente para preservar as características naturais dos grãos selecionados. A extração artesanal controlada proporciona uma bebida equilibrada, limpa e perfumada, ideal para acompanhar qualquer momento do dia.",
             ingredients: [
               "Café moído na hora (grãos selecionados)",
               "Água filtrada aquecida",
@@ -303,7 +304,7 @@ const main = async () => {
           {
             name: "Cappuccino Cremoso Premium®",
             description:
-              "Uma combinação perfeita entre café, leite vaporizado e uma espuma cremosa e aveludada. Finalizado com um leve toque de chocolate, é uma bebida equilibrada e extremamente aconchegante.",
+              "Uma combinação equilibrada de café espresso selecionado, leite vaporizado e espuma de leite aveludada. Finalizado com chocolate em pó premium e um delicado toque de canela, entrega uma bebida cremosa, aromática e extremamente aconchegante.",
             ingredients: [
               "Café espresso selecionado",
               "Leite vaporizado cremoso",
@@ -321,7 +322,7 @@ const main = async () => {
           {
             name: "Mocha Chocolate Supremo®",
             description:
-              "Uma bebida intensa e indulgente que combina café e chocolate de forma equilibrada. Cremosa e envolvente, é perfeita para quem quer algo mais doce e marcante.",
+              "Uma bebida intensa e cremosa que combina café espresso selecionado com chocolate meio amargo derretido. O leite vaporizado e a espuma aveludada equilibram a intensidade do café e do chocolate, criando uma bebida encorpada, doce na medida certa e finalizada com cacau.",
             ingredients: [
               "Café espresso selecionado",
               "Leite vaporizado cremoso",
@@ -342,7 +343,7 @@ const main = async () => {
         data: {
           name: "Água Mineral",
           description:
-            "Essencial e pura, perfeita para acompanhar qualquer momento com leveza e equilíbrio.",
+            "Água mineral leve e refrescante, servida gelada para acompanhar qualquer escolha do nosso cardápio. Uma opção simples e essencial para equilibrar a experiência, refrescar o paladar entre cada mordida e acompanhar cafés, doces, sobremesas ou lanches.",
           ingredients: [],
           price: 3.9,
           imageUrl:
@@ -364,7 +365,7 @@ const main = async () => {
           {
             name: "Sorvete com Cookie Supreme®",
             description:
-              "Uma combinação irresistível que une o melhor dos dois mundos. Nosso sorvete artesanal cremoso é servido com um cookie gourmet levemente aquecido, criando um contraste perfeito entre quente e frio. A cada colherada, a textura macia do sorvete se mistura com a crocância do cookie e o chocolate derretido, proporcionando uma experiência indulgente e marcante.",
+              "Sorvete artesanal cremoso servido com um cookie gourmet levemente aquecido, criando um delicioso contraste entre quente e frio. O interior macio do cookie, o chocolate derretido e a cremosidade do sorvete transformam cada colherada em uma experiência especial.",
             ingredients: [],
             price: 19.9,
             imageUrl:
@@ -375,7 +376,7 @@ const main = async () => {
           {
             name: "Fatia Bolo de Chocolate Premium®",
             description:
-              "Uma sobremesa rica e indulgente, com recheio cremoso de chocolate e textura aveludada. Ideal para quem busca uma experiência intensa e sofisticada em cada pedaço.",
+              "Fatia generosa de bolo de chocolate preparada para quem aprecia sabores intensos. A massa macia e úmida combina com um recheio cremoso e uma textura aveludada, criando uma sobremesa rica, equilibrada e perfeita para acompanhar um café recém-preparado.",
             ingredients: [],
             price: 15.9,
             imageUrl:
@@ -386,7 +387,7 @@ const main = async () => {
           {
             name: "Taça De Morango Delight®",
             description:
-              "Uma sobremesa elegante e irresistível, que combina camadas de sorvete macio com morangos frescos e um creme leve e aveludado. Finalizada com calda de morango, é uma opção equilibrada entre intensidade e frescor, perfeita para quem busca uma experiência completa em cada colherada.",
+              "Uma sobremesa refrescante e delicada preparada com camadas de sorvete cremoso, morangos frescos selecionados e um creme suave. Finalizada com calda de morango, combina doçura, frescor e diferentes texturas em uma apresentação especial.",
             ingredients: [],
             price: 18.9,
             imageUrl:
@@ -395,6 +396,63 @@ const main = async () => {
             coffeeShopId: coffeeShop.id,
           },
         ],
+      });
+
+      const fillingGroup = await tx.productOptionGroup.create({
+        data: {
+          name: "Recheio",
+          required: true,
+          minSelect: 1,
+          maxSelect: 1,
+          options: {
+            create: [
+              {
+                name: "Recheio de chocolate",
+                price: 3.0,
+              },
+              {
+                name: "Recheio de morango",
+                price: 3.0,
+              },
+              {
+                name: "Recheio de ovomaltine",
+                price: 4.5,
+              },
+              {
+                name: "Recheio de nutella",
+                price: 5.0,
+              },
+            ],
+          },
+        },
+      });
+
+      const productsWithFilling = await tx.product.findMany({
+        where: {
+          coffeeShopId: coffeeShop.id,
+          OR: [
+            {
+              menuCategoryId: cookiesCategory.id,
+            },
+            {
+              menuCategoryId: lancamentosCategory.id,
+              name: {
+                contains: "Cookie",
+                mode: "insensitive",
+              },
+            },
+          ],
+        },
+        select: {
+          id: true,
+        },
+      });
+
+      await tx.productOptionGroupProduct.createMany({
+        data: productsWithFilling.map((product: { id: string }) => ({
+          productId: product.id,
+          groupId: fillingGroup.id,
+        })),
       });
     },
     {

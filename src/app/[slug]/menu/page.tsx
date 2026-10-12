@@ -8,7 +8,19 @@ const MenuCategory = async () => {
     include: {
       menuCategories: {
         include: {
-          products: true,
+          products: {
+            include: {
+              optionGroups: {
+                include: {
+                  group: {
+                    include: {
+                      options: true,
+                    },
+                  },
+                },
+              },
+            },
+          },
         },
       },
     },

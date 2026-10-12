@@ -1,29 +1,47 @@
 "use client";
 
-import { Product } from "@prisma/client";
+import { CoffeeShop, Prisma } from "@prisma/client";
 import Image from "next/image";
 import { useState } from "react";
+import ProductDrawer from "./product-drawer";
 
+type ProductWithOptions = Prisma.ProductGetPayload<{
+  include: {
+    optionGroups: {
+      include: {
+        group: {
+          include: {
+            options: true;
+          };
+        };
+      };
+    };
+  };
+}>;
 interface ProductsProps {
-  products: Product[];
+  products: ProductWithOptions[];
+  coffeeshop: CoffeeShop;
 }
 
-const Products = ({ products }: ProductsProps) => {
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  
+const Products = ({ products, coffeeshop }: ProductsProps) => {
+const [selectedProduct, setSelectedProduct] =
+  useState<ProductWithOptions | null>(null);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
   return (
     <div className="space-y-3 px-6">
       {products.map((product) => (
         <div
           key={product.id}
-          onClick={() => setSelectedProduct(product)}
+          onClick={() => {
+            setDrawerOpen(true)
+            setSelectedProduct(product);
+          }}
           className="flex items-center justify-between gap-4"
         >
           {/* TEXTO */}
           <div className="flex-1">
-            <h3 className="font-lufga text-sm">
-              {product.name}
-            </h3>
+            <h3 className="font-lufga text-sm">{product.name}</h3>
 
             <p className="line-clamp-2 font-lufga text-sm text-[--muted-foreground]">
               {product.description}
@@ -48,6 +66,12 @@ const Products = ({ products }: ProductsProps) => {
           </div>
         </div>
       ))}
+
+      <ProductDrawer 
+        product={selectedProduct}
+        coffeeshop={coffeeshop}
+        open={drawerOpen} 
+        onOpenChange={setDrawerOpen} />
     </div>
   );
 };

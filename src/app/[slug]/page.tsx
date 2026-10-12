@@ -1,7 +1,7 @@
-import SplashScreen from "@/components/ui/splash-screen";
+import { redirect } from "next/navigation";
 
 const HomePage = () => {
-  return <SplashScreen />;
+  redirect("/loucos-por-cafe/menu");
 };
 
 export default HomePage;
