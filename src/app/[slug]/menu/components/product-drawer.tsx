@@ -3,6 +3,7 @@
 
 import { Drawer, DrawerContent, DrawerTitle } from "@/components/ui/drawer";
 import { CoffeeShop, Prisma } from "@prisma/client";
+import { Check } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -123,11 +124,15 @@ const ProductDrawer = ({
                       </p>
 
                       {group.required && (
-                        <div className="flex h-5 w-[86px] items-center justify-center rounded-sm bg-black uppercase">
-                          <span className="font-lufga text-[10px] font-semibold text-white">
-                            OBRIGATÓRIO
-                          </span>
-                        </div>
+                        group.options.some((option) => option.id === selectedOption) ? (
+                          <Check className="h-5 w-5 text-green-500" strokeWidth={3} />
+                        ) : (
+                          <div className="flex h-5 w-[86px] items-center justify-center rounded-sm bg-black uppercase">
+                            <span className="font-lufga text-[10px] font-semibold text-white">
+                              OBRIGATÓRIO
+                            </span>
+                          </div>
+                        )
                       )}
                     </div>
                   </div>
